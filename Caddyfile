@@ -1,0 +1,29 @@
+# =============================================================================
+# Caracore Helianto — Configuração Caddy para Produção (VPS com SSL automático)
+# Substitua seu-dominio.com.br pelo seu domínio real.
+# =============================================================================
+
+seu-dominio.com.br {
+    # Proxy reverso para o frontend React (rodando na porta local 3000)
+    reverse_proxy localhost:3000
+
+    # Adiciona cabeçalhos recomendados de segurança
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "strict-origin-when-cross-origin"
+    }
+}
+
+api.seu-dominio.com.br {
+    # Proxy reverso para a API Spring Boot (rodando na porta local 8080)
+    reverse_proxy localhost:8080
+
+    header {
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "strict-origin-when-cross-origin"
+    }
+}

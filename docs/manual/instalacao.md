@@ -9,8 +9,8 @@
 
 ## Fontes Oficiais de Download
 
-1. Loja de Releases: https://helianto.caracore.com.br/
-2. Repositório de código: https://github.com/chmulato/caracore-helianto
+1. Loja de Releases: https://chmulato.github.io/caracore-helianto-releases/
+2. Repositório de Releases: https://github.com/chmulato/caracore-helianto-releases
 3. Templates de deploy: disponíveis na página de [Download e Deploy](../download.html) nesta loja.
 
 ## Procedimento de Implantação
@@ -24,12 +24,12 @@
 2. **Obter os Arquivos de Configuração:**
    Baixe o arquivo de compose e o proxy de sua preferência:
    ```bash
-   wget https://raw.githubusercontent.com/chmulato/caracore-helianto/master/docker-compose.prod.yml
-   wget https://raw.githubusercontent.com/chmulato/caracore-helianto/master/Caddyfile
+   wget https://raw.githubusercontent.com/chmulato/caracore-helianto-releases/master/docker-compose.prod.yml
+   wget https://raw.githubusercontent.com/chmulato/caracore-helianto-releases/master/Caddyfile
    ```
 
 3. **Configurar as Variáveis de Ambiente (.env):**
-   Crie um arquivo `.env` contendo as variáveis críticas de produção (como senhas do PostgreSQL, chaves de criptografia JWT, credenciais de BolePix e configurações de SMTP). Use o template `.env.example` do repositório principal como base.
+   Crie um arquivo `.env` contendo as variáveis críticas de produção (como senhas do PostgreSQL, chaves de criptografia JWT, credenciais de BolePix e configurações de SMTP). Use o template `.env.example` como base.
 
 4. **Subir os Serviços:**
    ```bash

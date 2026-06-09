@@ -1,0 +1,79 @@
+name: caracore-helianto-prod
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: always
+    environment:
+      POSTGRES_DB: ${HELIANTO_DB_NAME}
+      POSTGRES_USER: ${HELIANTO_DB_USER}
+      POSTGRES_PASSWORD: ${HELIANTO_DB_PASSWORD}
+    volumes:
+      - helianto_pg_prod_data:/var/lib/postgresql/data
+    # Port 5432 is NOT mapped to public ports for security
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${HELIANTO_DB_USER}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+  api:
+    build:
+      context: .
+      dockerfile: helianto-api/Dockerfile
+    restart: always
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      HELIANTO_DB_HOST: postgres
+      HELIANTO_DB_PORT: 5432
+      HELIANTO_DB_NAME: ${HELIANTO_DB_NAME}
+      HELIANTO_DB_USER: ${HELIANTO_DB_USER}
+      HELIANTO_DB_PASSWORD: ${HELIANTO_DB_PASSWORD}
+      HELIANTO_JWT_SECRET: ${HELIANTO_JWT_SECRET}
+      HELIANTO_CORS_ORIGIN_1: ${HELIANTO_CORS_ORIGIN_1}
+      HELIANTO_CORS_ORIGIN_2: ${HELIANTO_CORS_ORIGIN_2}
+      HELIANTO_SEED_ENABLED: ${HELIANTO_SEED_ENABLED:-false}
+      HELIANTO_REGISTRATION_OPEN: ${HELIANTO_REGISTRATION_OPEN:-false}
+      CARACORE_DOMAIN: ${CARACORE_DOMAIN}
+      HELIANTO_DB_POOL_MIN: ${HELIANTO_DB_POOL_MIN:-10}
+      HELIANTO_DB_POOL_MAX: ${HELIANTO_DB_POOL_MAX:-50}
+      HELIANTO_TOMCAT_MAX_THREADS: ${HELIANTO_TOMCAT_MAX_THREADS:-200}
+    ports:
+      - "127.0.0.1:${HELIANTO_API_PORT:-8080}:8080" # Bound to localhost to prevent public access (use proxy)
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:8080/actuator/health || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+    logging:
+      driver: json-file
+      options:
+        max-size: "20m"
+        max-file: "5"
+
+  web:
+    build:
+      context: ./caracore-web
+      args:
+        VITE_API_URL: ${VITE_API_URL:-/api}
+    restart: always
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:${HELIANTO_WEB_PORT:-3000}:80" # Bound to localhost to prevent public access (use proxy)
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  helianto_pg_prod_data:

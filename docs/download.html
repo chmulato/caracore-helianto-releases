@@ -35,21 +35,21 @@
 
         <section class="card" style="border-left: 4px solid #10b981; background: var(--bg-card); padding: 24px; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 32px;">
             <h3>Como subir em produção (Docker Compose)</h3>
-            <p>Os arquivos prontos de infraestrutura estão disponíveis para download direto do nosso repositório de desenvolvimento no GitHub. Você também pode copiar as instruções básicas de deploy abaixo:</p>
+            <p>Os arquivos prontos de infraestrutura estão disponíveis para download direto do nosso repositório de releases no GitHub. Você também pode copiar as instruções básicas de deploy abaixo:</p>
             
             <p><strong>Fluxo de Deploy Rápido:</strong></p>
             <ol>
                 <li>Instale o Docker e o Docker Compose em sua VPS Linux.</li>
-                <li>Baixe o template <a href="https://raw.githubusercontent.com/chmulato/caracore-helianto/master/docker-compose.prod.yml" target="_blank" rel="noopener">docker-compose.prod.yml</a>.</li>
+                <li>Baixe o template <a href="https://raw.githubusercontent.com/chmulato/caracore-helianto-releases/master/docker-compose.prod.yml" target="_blank" rel="noopener">docker-compose.prod.yml</a>.</li>
                 <li>Configure as variáveis de ambiente necessárias em um arquivo <code>.env</code> local.</li>
                 <li>Inicie os serviços: <code>docker compose -f docker-compose.prod.yml up -d</code></li>
             </ol>
             
             <p>Abaixo estão os templates de proxy e infraestrutura do ecossistema:</p>
             <div style="margin-top: 15px; display: flex; flex-wrap: wrap; gap: 10px;">
-                <a href="https://raw.githubusercontent.com/chmulato/caracore-helianto/master/docker-compose.prod.yml" target="_blank" class="cta-btn cta-btn-primary" style="background-color: #0f766e;">docker-compose.prod.yml</a>
-                <a href="https://raw.githubusercontent.com/chmulato/caracore-helianto/master/Caddyfile" target="_blank" class="cta-btn cta-btn-secondary">Caddyfile (SSL Autônomo)</a>
-                <a href="https://raw.githubusercontent.com/chmulato/caracore-helianto/master/nginx.conf" target="_blank" class="cta-btn cta-btn-secondary">nginx.conf (Proxy reverso)</a>
+                <a href="https://raw.githubusercontent.com/chmulato/caracore-helianto-releases/master/docker-compose.prod.yml" target="_blank" class="cta-btn cta-btn-primary" style="background-color: #0f766e;">docker-compose.prod.yml</a>
+                <a href="https://raw.githubusercontent.com/chmulato/caracore-helianto-releases/master/Caddyfile" target="_blank" class="cta-btn cta-btn-secondary">Caddyfile (SSL Autônomo)</a>
+                <a href="https://raw.githubusercontent.com/chmulato/caracore-helianto-releases/master/nginx.conf" target="_blank" class="cta-btn cta-btn-secondary">nginx.conf (Proxy reverso)</a>
             </div>
         </section>
 
