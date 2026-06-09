@@ -11,66 +11,223 @@
     <link rel="stylesheet" href="assets/caracore-institutional-components.css">
     <link rel="stylesheet" href="assets/evolution-status/evolution-status.css">
     <style>
+        body {
+            background-color: #f9fafb;
+            color: #374151;
+            font-size: 17px;
+            line-height: 1.65;
+        }
+        h1, h2, h3, h4 {
+            color: #111827;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+        }
+        h1 { font-size: 2.75rem; }
+        h2 { font-size: 2rem; border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; margin-top: 2rem; }
+        h3 { font-size: 1.45rem; }
+        p {
+            max-width: 75ch;
+            margin-bottom: 1.25rem;
+        }
+        .hero-desc {
+            font-size: 1.15rem;
+            max-width: 75ch;
+        }
+        .hero-cta {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+        }
+        .hero-pillars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .hero-pillar-item {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+            transition: all 0.2s ease;
+        }
+        .hero-pillar-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        .hero-pillar-item strong {
+            display: block;
+            font-size: 1.2rem;
+            color: #111827;
+            margin-bottom: 0.5rem;
+        }
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .cta-btn {
+            font-size: 1.05rem;
+            padding: 0.85rem 1.4rem;
+            border-radius: 8px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        .cta-btn-primary {
+            background-color: #2563eb;
+            color: #ffffff;
+            border: 1px solid #2563eb;
+        }
+        .cta-btn-primary:hover {
+            background-color: #1d4ed8;
+            border-color: #1d4ed8;
+            transform: translateY(-1px);
+        }
+        .cta-btn-secondary {
+            background-color: #ffffff;
+            color: #2563eb;
+            border: 1px solid #e5e7eb;
+        }
+        .cta-btn-secondary:hover {
+            background-color: #f3f4f6;
+            transform: translateY(-1px);
+        }
+        .section-block {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        .section-block-alt {
+            background: #f3f4f6;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            margin-bottom: 2.5rem;
+        }
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .audience-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            transition: all 0.25s ease;
+        }
+        .audience-card:hover {
+            background: #f9fafb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .audience-card h4 {
+            color: #2563eb;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .features-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .feature-block-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: all 0.2s ease;
+        }
+        .feature-block-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+        }
+        .feature-block-card ul {
+            margin: 0;
+            padding-left: 1.25rem;
+        }
+        .feature-block-card li {
+            margin-bottom: 0.75rem;
+        }
+        .badge-theme {
+            display: inline-block;
+            padding: 0.25rem 0.65rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+        .badge-security { background-color: #dbeafe; color: #1e40af; }
+        .badge-finance { background-color: #d1fae5; color: #065f46; }
+        .badge-infra { background-color: #fef3c7; color: #92400e; }
+        .diferencial-raro-box {
+            background: linear-gradient(135deg, #eff6ff, #f0fdf4);
+            border: 1px solid #bfdbfe;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+        .diferencial-raro-box h3 {
+            color: #1e3a8a;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .diferencial-raro-box li {
+            margin-bottom: 0.5rem;
+        }
         .timeline {
             position: relative;
-            margin: 2rem 0;
-            padding-left: 2rem;
-            border-left: 3px solid #0f766e;
+            margin: 2.5rem 0;
+            padding-left: 2.5rem;
+            border-left: 3px solid #3b82f6;
         }
         .timeline-item {
             position: relative;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: calc(-2rem - 7px);
-            top: 5px;
-            width: 12px;
-            height: 12px;
+            left: calc(-2.5rem - 8px);
+            top: 6px;
+            width: 14px;
+            height: 14px;
             border-radius: 50%;
             background: #10b981;
-            border: 2px solid var(--bg-dark);
+            border: 3px solid #f9fafb;
         }
         .timeline-item.pending::before {
             background: #f59e0b;
         }
         .timeline-date {
-            font-size: 0.85rem;
-            color: var(--accent-blue);
-            font-weight: 700;
+            font-size: 0.9rem;
+            color: #2563eb;
+            font-weight: 800;
+            margin-bottom: 0.25rem;
         }
-        .audience-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.25rem;
-            margin: 1.5rem 0;
-        }
-        .audience-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1.25rem;
-            transition: all 0.25s ease;
-        }
-        .audience-card:hover {
-            background: var(--bg-card-hover);
-            transform: translateY(-2px);
-        }
-        .audience-card h4 {
-            color: var(--accent-gold);
-            margin: 0 0 0.5rem 0;
-        }
-        .diferencial-raro-box {
-            background: linear-gradient(135deg, rgba(15, 118, 110, 0.15), rgba(30, 58, 138, 0.15));
-            border: 1px solid #0f766e;
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
-        .diferencial-raro-box h3 {
-            color: var(--accent-gold);
-            margin-top: 0;
+        .timeline-item p {
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -85,47 +242,49 @@
         </nav>
 
         <!-- Lançamento oficial do SaaS — 30/12/2027 -->
-        <section class="cso-launch-banner" aria-label="Data de lançamento" style="background: linear-gradient(135deg, #1e3a8a, #0f766e); color: white;">
-            <p class="cso-launch-label" style="background: #10b981;">Lançamento oficial</p>
-            <p class="cso-launch-date">Helianto Condominium para produção — <strong>30 de dezembro de 2027</strong>. O Helianto Condominium é um sistema completo para administração condominial com soberania de dados e motor financeiro auditável.</p>
+        <section class="cso-launch-banner" aria-label="Data de lançamento" style="background: linear-gradient(135deg, #1e3a8a, #0f766e); color: white; border: none; border-radius: 12px; padding: 1.5rem 2rem;">
+            <p class="cso-launch-label" style="background: #10b981; color: white;">Lançamento oficial</p>
+            <p class="cso-launch-date" style="font-size: 1.1rem; line-height: 1.5;">Helianto Condominium para produção — <strong>30 de dezembro de 2027</strong>. O Helianto Condominium é um sistema completo para administração condominial com soberania de dados e motor financeiro auditável.</p>
         </section>
 
-        <section class="cso-launch-banner" aria-label="Política institucional">
-            <p class="cso-launch-label">Soberania de Dados</p>
-            <p class="cso-launch-date">Os dados são e sempre serão do cliente. O Helianto Condominium permite que você hospede a aplicação em sua infraestrutura local (VPS) ou em qualquer provedor de nuvem, mantendo o controle total de sua operação.</p>
+        <!-- Seção de Soberania de Dados -->
+        <section class="cso-launch-banner" aria-label="Política institucional" style="background: #ffffff; border: 1px solid #e5e7eb; border-left: 5px solid #2563eb; padding: 1.5rem 2rem; border-radius: 12px; margin-bottom: 2.5rem; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);">
+            <p class="cso-launch-label" style="color: #2563eb; font-weight: 800;">Soberania de Dados</p>
+            <p class="cso-launch-date" style="color: #374151;">Os dados são e sempre serão do cliente. O Helianto Condominium permite que você hospede a aplicação em sua infraestrutura local (VPS) ou em qualquer provedor de nuvem, mantendo o controle total de sua operação.</p>
         </section>
 
+        <!-- Hero Section -->
         <section class="hero-cta" aria-label="O que é o Helianto Condominium?">
-            <p class="hero-label">SaaS Condominial de Alta Performance</p>
-            <h2 class="hero-title">Engenharia de elite e soberania para a gestão de condomínios.</h2>
-            <p class="hero-desc" style="margin-top: 1rem;">O <strong>Helianto Condominium</strong> é um sistema robusto desenvolvido sob medida para respeitar a complexidade contábil e a privacidade de dados das organizações. Sem caixas-pretas ou lentidão: uma arquitetura focada no controle de custos e integridade.</p>
+            <p class="hero-label" style="color: #2563eb; font-weight: 800; font-size: 0.9rem;">SaaS Condominial de Alta Performance</p>
+            <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 1rem;">Engenharia de elite e soberania para a gestão de condomínios.</h2>
+            <p class="hero-desc">O <strong>Helianto Condominium</strong> é um sistema robusto desenvolvido sob medida para respeitar a complexidade contábil e a privacidade de dados das organizações. Sem caixas-pretas ou lentidão: uma arquitetura focada no controle de custos e integridade.</p>
             
-            <p class="hero-tagline" style="margin-top:1.2rem; font-size:1.15rem; font-weight:700; color: #10b981;">Benefícios diretos que entregamos:</p>
-            <div class="hero-pillars" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1.25rem 0;">
-                <div class="hero-pillar-item" style="padding: 1rem; border-radius: 8px; background: rgba(255,255,255,0.04); border-left: 4px solid #3b82f6;">
-                    <strong>Controle Total</strong><br>
-                    <span style="font-size: 0.9rem; opacity: 0.9;">Seus dados hospedados na sua própria infraestrutura, com independência total de terceiros.</span>
+            <p class="hero-tagline" style="margin-top:1.5rem; font-size:1.2rem; font-weight:800; color: #2563eb;">Benefícios diretos que entregamos:</p>
+            <div class="hero-pillars">
+                <div class="hero-pillar-item" style="border-top: 4px solid #3b82f6;">
+                    <strong>🔐 Controle Total</strong>
+                    <span>Seus dados hospedados na sua própria infraestrutura, com independência total de terceiros.</span>
                 </div>
-                <div class="hero-pillar-item" style="padding: 1rem; border-radius: 8px; background: rgba(255,255,255,0.04); border-left: 4px solid #10b981;">
-                    <strong>Velocidade Real</strong><br>
-                    <span style="font-size: 0.9rem; opacity: 0.9;">Interface mobile-first otimizada e responsiva, sem telas lentas ou processos travados.</span>
+                <div class="hero-pillar-item" style="border-top: 4px solid #10b981;">
+                    <strong>⚡ Velocidade Real</strong>
+                    <span>Interface mobile-first otimizada e responsiva, sem telas lentas ou processos travados.</span>
                 </div>
-                <div class="hero-pillar-item" style="padding: 1rem; border-radius: 8px; background: rgba(255,255,255,0.04); border-left: 4px solid #f59e0b;">
-                    <strong>Financeiro Preciso</strong><br>
-                    <span style="font-size: 0.9rem; opacity: 0.9;">Motor contábil com rateios automáticos, fundos segmentados e conciliação em segundos.</span>
+                <div class="hero-pillar-item" style="border-top: 4px solid #f59e0b;">
+                    <strong>💰 Financeiro Preciso</strong>
+                    <span>Motor contábil com rateios automáticos, fundos segmentados e conciliação em segundos.</span>
                 </div>
             </div>
             
-            <div class="cta-buttons" style="margin-top: 1.5rem;">
-                <a href="canal-feedback.html" class="cta-btn cta-btn-primary" style="background-color: #0f766e;">Solicitar demonstração</a>
-                <a href="download.html" class="cta-btn cta-btn-secondary" style="border-color: #10b981; color: #10b981;">Baixar release de teste</a>
-                <a href="canal-feedback.html" class="cta-btn cta-btn-secondary">Falar com a equipe técnica</a>
+            <div class="cta-buttons">
+                <a href="canal-feedback.html" class="cta-btn cta-btn-primary">Solicitar demonstração ↘</a>
+                <a href="download.html" class="cta-btn cta-btn-secondary" style="color: #2563eb; border-color: #2563eb;">Baixar release de teste ⬇</a>
+                <a href="canal-feedback.html" class="cta-btn cta-btn-secondary">Falar com a equipe técnica 💬</a>
             </div>
-            <p class="tagline">Oficina: caracore-helianto · Loja: canal oficial de releases · Lançamento em 30 de dezembro de 2027.</p>
+            <p class="tagline" style="color: #6b7280; font-size: 0.9rem;">Oficina: caracore-helianto · Loja: canal oficial de releases · Lançamento em 30 de dezembro de 2027.</p>
         </section>
 
         <!-- Seção: Para quem é -->
-        <section class="target-audience-section" style="margin-top: 3rem;">
+        <section class="section-block">
             <h2>Para quem é o Helianto Condominium?</h2>
             <p class="text-muted">Desenhado para simplificar e trazer conformidade jurídica à gestão.</p>
             <div class="audience-grid">
@@ -149,155 +308,151 @@
         </section>
 
         <!-- Seção: Storytelling -->
-        <section class="storytelling-section" style="background: rgba(255,255,255,0.02); padding: 1.5rem; border-radius: 10px; border: 1px solid var(--border);">
+        <section class="section-block-alt">
             <h3>Por trás do código: Por que criamos o Helianto?</h3>
             <p class="text-muted" style="margin-bottom: 0;">
                 Síndicos e administradoras perdem horas tentando conciliar dados inconsistentes provenientes de sistemas obsoletos. Receber três versões diferentes do mesmo relatório contábil é uma dor real que gera desconfiança. O Helianto Condominium elimina essa dor com um motor financeiro rígido compilado, segregação real de fundos e automação de alertas de WhatsApp. A engenharia deve simplificar a governança, não trazer insegurança.
             </p>
         </section>
 
-        <header style="margin-top: 3rem;">
-            <h1>Recursos Detalhados</h1>
-            <h2>Explore os módulos divididos por áreas críticas de operação</h2>
-        </header>
-
-        <section class="cso-content">
-            <!-- Blocos de Recursos Organizados -->
-            <div class="row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+        <!-- Seção: Recursos Detalhado dividida em cores temáticas -->
+        <section class="section-block">
+            <h2>Recursos Detalhados</h2>
+            <p class="text-muted" style="margin-bottom: 2rem;">Explore os módulos divididos por áreas críticas de operação:</p>
+            <div class="features-container">
                 <!-- 🔐 Segurança & Soberania -->
-                <div class="cso-overview" style="border-top: 4px solid #3b82f6;">
-                    <h3 style="color: #3b82f6;"><i class="bi bi-shield-lock"></i> 🔐 Segurança & Soberania</h3>
-                    <ul style="margin: 0; padding-left: 1.15rem; color: var(--text-secondary);">
-                        <li style="margin-bottom: 0.8rem;">
-                            <strong>Multi-tenant real (PostgreSQL):</strong> Dados de moradores e boletos de cada condomínio estão matematicamente isolados no banco. *Evita o risco de vazamento cruzado de dados entre condomínios diferentes.*
+                <div class="feature-block-card" style="border-top: 4px solid #3b82f6;">
+                    <span class="badge-theme badge-security">Segurança &amp; Soberania</span>
+                    <h3>🔐 Proteção Absoluta</h3>
+                    <ul>
+                        <li>
+                            <strong>Multi-tenant real (PostgreSQL):</strong> Dados de moradores e boletos de cada condomínio estão matematicamente isolados no banco. *Evita o risco de vazamento cruzado de dados confidenciais.*
                         </li>
-                        <li style="margin-bottom: 0.8rem;">
+                        <li>
                             <strong>LogSanitizer (LGPD):</strong> Higieniza telefones, CPFs e criptografa IPs nos logs em tempo real. *Garante conformidade estrita sem penalizar a performance da CPU.*
                         </li>
-                        <li style="margin-bottom: 0.8rem;">
+                        <li>
                             <strong>Hospedagem Própria (Self-Hosted):</strong> Suba na sua VPS ou nuvem privada. *Você é dono legítimo da sua base de dados.*
                         </li>
                     </ul>
                 </div>
 
                 <!-- 💰 Financeiro & Cobrança -->
-                <div class="cso-overview" style="border-top: 4px solid #10b981;">
-                    <h3 style="color: #10b981;"><i class="bi bi-currency-dollar"></i> 💰 Financeiro & Cobrança</h3>
-                    <ul style="margin: 0; padding-left: 1.15rem; color: var(--text-secondary);">
-                        <li style="margin-bottom: 0.8rem;">
-                            <strong>Motor de Rateio Dinâmico:</strong> Calcula automaticamente cotas por fração ideal ou divisão igualitária. *Evita erros manuais e divergências em assembleia.*
+                <div class="feature-block-card" style="border-top: 4px solid #10b981;">
+                    <span class="badge-theme badge-finance">Financeiro &amp; Cobrança</span>
+                    <h3>💰 Integridade Contábil</h3>
+                    <ul>
+                        <li>
+                            <strong>Motor de Rateio Dinâmico:</strong> Calcula automaticamente cotas por fração ideal ou divisão igualitária. *Evita erros de cálculo e divergências no fechamento mensal.*
                         </li>
-                        <li style="margin-bottom: 0.8rem;">
-                            <strong>Juros & Multas Automáticos:</strong> Multa fixa de 2% e juros pro rata die de 1% ao mês em concordância com o Código Civil brasileiro.
+                        <li>
+                            <strong>Juros &amp; Multas Automáticos:</strong> Multa fixa de 2% e juros pro rata die de 1% ao mês em concordância com o Código Civil brasileiro.
                         </li>
-                        <li style="margin-bottom: 0.8rem;">
-                            <strong>Régua de Cobrança e Alertas:</strong> Lembretes automáticos pré e pós-vencimento (WhatsApp/Telegram). *Garante a redução de inadimplência ativa.*
+                        <li>
+                            <strong>Régua de Cobrança e Alertas:</strong> Lembretes automáticos pré e pós-vencimento. *Garante a redução de inadimplência ativa.*
                         </li>
-                        <li style="margin-bottom: 0.8rem;">
-                            <strong>BolePix Nativo:</strong> Pagamento instantâneo via Pix ou boleto. *Reduz as taxas bancárias abusivas e acelera o caixa condominial.*
+                        <li>
+                            <strong>BolePix Nativo:</strong> Pagamento instantâneo via Pix ou boleto. *Reduz as taxas de cobrança bancária e acelera a conciliação de caixa.*
                         </li>
                     </ul>
                 </div>
 
                 <!-- ⚙️ Engenharia & Infraestrutura -->
-                <div class="cso-overview" style="border-top: 4px solid #f59e0b;">
-                    <h3 style="color: #f59e0b;"><i class="bi bi-cpu"></i> ⚙️ Engenharia & Infraestrutura</h3>
-                    <ul style="margin: 0; padding-left: 1.15rem; color: var(--text-secondary);">
-                        <li style="margin-bottom: 0.8rem;">
-                            <strong>Stack Sênior:</strong> Desenvolvido com Java 25 (LTS) e Spring Boot 4.0.6. *Estabilidade operacional e atualizações de longo prazo planejadas.*
+                <div class="feature-block-card" style="border-top: 4px solid #f59e0b;">
+                    <span class="badge-theme badge-infra">Engenharia &amp; Infra</span>
+                    <h3>⚙️ Robustez de Sistemas</h3>
+                    <ul>
+                        <li>
+                            <strong>Stack Sênior:</strong> Desenvolvido com Java 25 (LTS) e Spring Boot 4.0.6. *Estabilidade operacional e atualizações previsíveis.*
                         </li>
-                        <li style="margin-bottom: 0.8rem;">
+                        <li>
                             <strong>Orquestração de Containeres:</strong> Deploy pronto com Docker Compose, Caddy (SSL automático) e Nginx. *Setup em VPS concluído em minutos.*
                         </li>
-                        <li style="margin-bottom: 0.8rem;">
-                            <strong>Cobertura de Testes de 81%:</strong> Suíte de validação assegurada por JaCoCo. *Confiabilidade contínua antes de tocar o ambiente de produção.*
+                        <li>
+                            <strong>Cobertura de Testes de 81%:</strong> Suíte de validação assegurada por JaCoCo. *Confiabilidade contínua antes de tocar a produção.*
                         </li>
                     </ul>
                 </div>
             </div>
+        </section>
 
-            <!-- Seção: Diferenciais Raros -->
-            <div class="diferencial-raro-box">
-                <h3>O que o Helianto faz que outros não fazem</h3>
-                <p>Enquanto o mercado condominial oferece sistemas legados pesados ou gateways de pagamento centralizados com taxas ocultas, o Helianto se destaca por três diferenciais de engenharia únicos:</p>
-                <ul>
-                    <li><strong>Isolamento Físico de Contexto:</strong> Bloqueios ThreadLocal impedem qualquer query de misturar dados entre tenants diferentes.</li>
-                    <li><strong>Limpeza Ativa nos Logs (LogSanitizer):</strong> Nenhum dado sensível de morador toca os arquivos de log do disco em formato claro.</li>
-                    <li><strong>Soberania de Código:</strong> O sistema roda offline ou online sob o seu controle técnico direto, sem taxas abusivas de locação de infraestrutura.</li>
-                </ul>
-            </div>
+        <!-- Seção: Diferenciais Raros -->
+        <section class="diferencial-raro-box">
+            <h3>O que o Helianto faz que outros não fazem</h3>
+            <p>Enquanto o mercado condominial oferece sistemas legados pesados ou gateways de pagamento centralizados com taxas ocultas, o Helianto se destaca por três diferenciais de engenharia únicos:</p>
+            <ul style="margin: 0; padding-left: 1.25rem;">
+                <li><strong>Isolamento Físico de Contexto:</strong> Bloqueios ThreadLocal impedem qualquer query de misturar dados entre tenants diferentes.</li>
+                <li><strong>Limpeza Ativa nos Logs (LogSanitizer):</strong> Nenhum dado sensível de morador toca os arquivos de log do disco em formato claro.</li>
+                <li><strong>Soberania de Código:</strong> O sistema roda offline ou online sob o seu controle técnico direto, sem taxas abusivas de locação de infraestrutura.</li>
+            </ul>
+        </section>
 
-            <!-- Especificações Técnicas Formatadas -->
-            <div class="cso-tech-specs">
-                <h3>Especificações Técnicas de Engenharia</h3>
-                <p>O Helianto Condominium foi construído sob uma sólida base de engenharia de elite: **Java 25 LTS**, **Spring Boot 4.0.6**, **PostgreSQL multi-tenant** e **81% de cobertura de testes** via JaCoCo garantindo estabilidade e previsibilidade.</p>
-                <div class="specs-grid">
-                    <div class="spec-item">
-                        <strong>Plataforma:</strong> Nuvem Privada / VPS Linux
-                    </div>
-                    <div class="spec-item">
-                        <strong>Arquitetura:</strong> API-first / Web responsiva
-                    </div>
-                    <div class="spec-item">
-                        <strong>Banco de Dados:</strong> PostgreSQL com tenant context
-                    </div>
-                    <div class="spec-item">
-                        <strong>Deploy:</strong> Docker Compose + Caddy / Nginx
-                    </div>
+        <!-- Especificações Técnicas -->
+        <section class="section-block">
+            <h3>Especificações Técnicas de Engenharia</h3>
+            <p>O Helianto Condominium foi construído sob uma sólida base de engenharia de elite: **Java 25 LTS**, **Spring Boot 4.0.6**, **PostgreSQL multi-tenant** e **81% de cobertura de testes** via JaCoCo garantindo estabilidade e previsibilidade.</p>
+            <div class="specs-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.5rem;">
+                <div class="spec-item" style="background: #f3f4f6; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1rem;">
+                    <strong>Plataforma:</strong><br>Nuvem Privada / VPS Linux
                 </div>
-            </div>
-
-            <div class="cso-launch-info">
-                <h3>Lançamento do Produto</h3>
-                <p><strong>Data prevista:</strong> 30 de dezembro de 2027</p>
-                <p>A aplicação está configurada para deploy simplificado através de contêineres Docker, permitindo controle absoluto da infraestrutura e hospedagem local ou em nuvem pública.</p>
-            </div>
-
-            <!-- Seção: Roadmap Visual -->
-            <div class="cso-overview">
-                <h3>Linha do Tempo e Roadmap Visual</h3>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">Junho 2026</div>
-                        <strong>API & Web Components</strong>
-                        <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Módulos contábeis compilados e interface web responsiva implementados.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">Junho 2026</div>
-                        <strong>Templates de Deploy Prontos</strong>
-                        <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Estruturas de compose, Caddyfile e Nginx em produção.</p>
-                    </div>
-                    <div class="timeline-item pending">
-                        <div class="timeline-date">Sprint Atual</div>
-                        <strong>Testes de Segurança Local</strong>
-                        <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Verificação de integridade, testes de firewall e automação de BolePix.</p>
-                    </div>
-                    <div class="timeline-item pending">
-                        <div class="timeline-date">30 de dezembro de 2027</div>
-                        <strong>Lançamento Oficial da Release v1.0.0</strong>
-                        <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);">Disponibilização da release de produção oficial no ecossistema.</p>
-                    </div>
+                <div class="spec-item" style="background: #f3f4f6; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1rem;">
+                    <strong>Arquitetura:</strong><br>API-first / Web responsiva
                 </div>
-            </div>
-
-            <div class="cso-links">
-                <h3>Arquivos do Projeto</h3>
-                <ul>
-                    <li><strong>Oficina de Desenvolvimento:</strong> repositório de desenvolvimento fechado da Cara Core Informática</li>
-                    <li><strong>Loja de Releases:</strong> <a href="download.html">downloads de arquivos de deploy</a></li>
-                    <li><strong>Wiki da aplicação:</strong> <a href="wiki/index.html">documentação de arquitetura e segurança</a></li>
-                </ul>
+                <div class="spec-item" style="background: #f3f4f6; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1rem;">
+                    <strong>Banco de Dados:</strong><br>PostgreSQL com tenant context
+                </div>
+                <div class="spec-item" style="background: #f3f4f6; border: 1px solid #e5e7eb; border-radius: 8px; padding: 1rem;">
+                    <strong>Deploy:</strong><br>Docker Compose + Caddy / Nginx
+                </div>
             </div>
         </section>
 
-        <footer class="cso-footer">
-            <p>Oficina: caracore-helianto · Loja: chmulato.github.io/caracore-helianto-releases · Lançamento: 30 de dezembro de 2027 · <a href="https://www.caracore.com.br/portfolio.html#helianto-condominium" rel="noopener">Portfólio Cara Core</a></p>
+        <!-- Seção: Roadmap Visual -->
+        <section class="section-block">
+            <h3>Linha do Tempo e Roadmap Visual</h3>
+            <p class="text-muted">Acompanhe a evolução do projeto e as próximas entregas técnicas:</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Junho 2026</div>
+                    <strong>API &amp; Web Components</strong>
+                    <p style="font-size: 0.95rem; color: #475569;">Módulos contábeis compilados e interface web responsiva implementados.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Junho 2026</div>
+                    <strong>Templates de Deploy Prontos</strong>
+                    <p style="font-size: 0.95rem; color: #475569;">Estruturas de compose, Caddyfile e Nginx em produção.</p>
+                </div>
+                <div class="timeline-item pending">
+                    <div class="timeline-date">Sprint Atual</div>
+                    <strong>Testes de Segurança Local</strong>
+                    <p style="font-size: 0.95rem; color: #475569;">Verificação de integridade, testes de firewall e automação de BolePix.</p>
+                </div>
+                <div class="timeline-item pending">
+                    <div class="timeline-date">30 de dezembro de 2027</div>
+                    <strong>Lançamento Oficial da Release v1.0.0</strong>
+                    <p style="font-size: 0.95rem; color: #475569;">Disponibilização da release de produção oficial no ecossistema.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Arquivos do Projeto -->
+        <section class="section-block">
+            <h3>Arquivos do Projeto</h3>
+            <ul style="margin: 0; padding-left: 1.25rem;">
+                <li style="margin-bottom: 0.5rem;"><strong>Oficina de Desenvolvimento:</strong> repositório de desenvolvimento fechado da Cara Core Informática</li>
+                <li style="margin-bottom: 0.5rem;"><strong>Loja de Releases:</strong> <a href="download.html" style="color: #2563eb; text-decoration: none;">downloads de arquivos de deploy</a></li>
+                <li style="margin-bottom: 0.5rem;"><strong>Wiki da aplicação:</strong> <a href="wiki/index.html" style="color: #2563eb; text-decoration: none;">documentação de arquitetura e segurança</a></li>
+            </ul>
+        </section>
+
+        <footer class="cso-footer" style="background: #ffffff; border-top: 1px solid #e5e7eb; padding: 2rem; text-align: center; font-size: 0.9rem; color: #6b7280; border-radius: 12px; margin-top: 3rem;">
+            <p>Oficina: caracore-helianto · Loja: chmulato.github.io/caracore-helianto-releases · Lançamento: 30 de dezembro de 2027 · <a href="https://www.caracore.com.br/portfolio.html#helianto-condominium" rel="noopener" style="color: #2563eb; text-decoration: none;">Portfólio Cara Core</a></p>
             <p>&copy; 2026 Cara Core Informática - Inovação, Soberania e Eficiência</p>
         </footer>
     </div>
 
     <script src="assets/js/main.js?v=20260404-2"></script>
-    <div class="evo-beta-wrap" aria-hidden="true"><span class="evo-beta-badge" style="background-color: #0f766e;" title="Versão de teste oficial">Active<span class="evo-beta-tooltip">Esta é a loja oficial de releases e guias de infraestrutura do Helianto Condominium.</span></span></div>
-    <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" style="background-color: #0f766e;" aria-label="Sugira uma melhoria pelo canal oficial"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Solicitar demonstração</a></div>
+    <div class="evo-beta-wrap" aria-hidden="true"><span class="evo-beta-badge" style="background-color: #2563eb; color: white;" title="Versão de teste oficial">Active<span class="evo-beta-tooltip">Esta é a loja oficial de releases e guias de infraestrutura do Helianto Condominium.</span></span></div>
+    <div class="evo-feedback-fab"><a href="canal-feedback.html" class="evo-feedback-btn" style="background-color: #2563eb; color: white;" aria-label="Sugira uma melhoria pelo canal oficial"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Solicitar demonstração</a></div>
 </body>
 </html>
