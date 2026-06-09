@@ -1,5 +1,5 @@
-// Contador regressivo para 30/12/2026
-const targetDate = new Date('2026-12-30T00:00:00').getTime();
+// Contador regressivo para 30/12/2027
+const targetDate = new Date('2027-12-30T00:00:00').getTime();
 const countdownElement = document.getElementById('countdown');
 
 function updateCountdown() {

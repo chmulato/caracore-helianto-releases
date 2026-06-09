@@ -47,7 +47,7 @@ https://chmulato.github.io/caracore-helianto-releases/download.html
 
 1. **Fase:** Active Development / Seed.
 2. **Versão:** v1.0.0.
-3. **Data de lançamento planejada:** 30 de dezembro de 2026.
+3. **Data de lançamento planejada:** 30 de dezembro de 2027.
 4. **Qualidade:** Cobertura de testes automatizados de 81% assegurada via JaCoCo.
 
 ## Licença
