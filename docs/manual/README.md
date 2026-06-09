@@ -9,7 +9,7 @@ Este manual apresenta as diretrizes de implantação, configuração técnica e 
 O documento cobre:
 1. Visão geral da plataforma e stack.
 2. Instalação e configuração inicial (Docker Compose, Caddy e Nginx).
-3. Diretrizes de proteção de dados (LGPD e LogSanitizer).
+3. Diretrizes de proteção de dados (LGPD e PrivacyGuard).
 4. Arquitetura de isolamento multi-tenant no PostgreSQL.
 
 ## Visão Geral do Produto

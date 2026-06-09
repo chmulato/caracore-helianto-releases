@@ -1,0 +1,105 @@
+/**
+ * Cara Core / Helianto — Design Tokens
+ * Fonte única de verdade para cores, tipografia, espaçamento e sombras.
+ */
+:root {
+  /* Marca Helianto */
+  --cc-primary: #2563eb;
+  --cc-primary-hover: #1d4ed8;
+  --cc-primary-dark: #1e3a8a;
+  --cc-primary-light: #3b82f6;
+  --cc-secondary: #0f766e;
+  --cc-secondary-hover: #0d6560;
+  --cc-accent: #10b981;
+  --cc-accent-hover: #059669;
+  --cc-accent-warm: #f59e0b;
+  --cc-accent-warm-hover: #d97706;
+
+  /* Neutros */
+  --cc-bg: #f9fafb;
+  --cc-bg-muted: #f3f4f6;
+  --cc-surface: #ffffff;
+  --cc-surface-hover: #f9fafb;
+  --cc-elevated: #f3f4f6;
+  --cc-text: #111827;
+  --cc-text-body: #374151;
+  --cc-text-muted: #6b7280;
+  --cc-text-subtle: #475569;
+  --cc-border: #e5e7eb;
+  --cc-border-strong: #dbe5ef;
+
+  /* Tipografia */
+  --cc-font-size-base: 17px;
+  --cc-font-size-sm: 0.9rem;
+  --cc-font-size-lg: 1.15rem;
+  --cc-line-height: 1.65;
+  --cc-line-height-heading: 1.25;
+  --cc-font-weight-heading: 800;
+  --cc-font-weight-semibold: 700;
+  --cc-font-weight-medium: 600;
+
+  /* Espaçamento */
+  --cc-space-xs: 0.35rem;
+  --cc-space-sm: 0.75rem;
+  --cc-space-md: 1rem;
+  --cc-space-lg: 1.5rem;
+  --cc-space-xl: 2rem;
+  --cc-space-2xl: 2.5rem;
+  --cc-space-3xl: 3rem;
+
+  /* Raios e sombras */
+  --cc-radius-sm: 8px;
+  --cc-radius-md: 10px;
+  --cc-radius-lg: 12px;
+  --cc-radius-pill: 999px;
+  --cc-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --cc-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  --cc-shadow-lg: 0 6px 12px rgba(0, 0, 0, 0.05);
+  --cc-shadow-primary: 0 4px 14px rgba(37, 99, 235, 0.25);
+  --cc-shadow-accent: 0 4px 14px rgba(16, 185, 129, 0.2);
+
+  /* Badges temáticos */
+  --cc-badge-security-bg: #dbeafe;
+  --cc-badge-security-text: #1e40af;
+  --cc-badge-finance-bg: #d1fae5;
+  --cc-badge-finance-text: #065f46;
+  --cc-badge-infra-bg: #fef3c7;
+  --cc-badge-infra-text: #92400e;
+
+  /* Aliases legados (styles.css existente) */
+  --bg-dark: var(--cc-bg);
+  --bg-card: var(--cc-surface);
+  --bg-card-hover: var(--cc-surface-hover);
+  --bg-elevated: var(--cc-elevated);
+  --text-primary: var(--cc-text);
+  --text-secondary: var(--cc-text-body);
+  --accent-gold: var(--cc-accent-warm);
+  --accent-blue: var(--cc-primary);
+  --accent-green: var(--cc-accent);
+  --accent-purple: #8b5cf6;
+  --border: var(--cc-border);
+  --shadow: rgba(0, 0, 0, 0.05);
+
+  /* Aliases institucionais */
+  --cc-i-surface: var(--cc-surface);
+  --cc-i-border: var(--cc-border-strong);
+  --cc-i-text: #203246;
+  --cc-i-muted: #5d6f82;
+  --cc-i-link: var(--cc-secondary);
+
+  /* Aliases evolution-status */
+  --evo-emerald-50: #ecfdf5;
+  --evo-emerald-100: #d1fae5;
+  --evo-emerald-500: var(--cc-accent);
+  --evo-emerald-600: var(--cc-accent-hover);
+  --evo-emerald-700: #047857;
+  --evo-space-800: #1e293b;
+  --evo-space-700: #334155;
+  --evo-space-600: #475569;
+  --evo-space-500: #64748b;
+  --evo-space-400: #94a3b8;
+  --evo-white: #f8fafc;
+  --evo-shadow: var(--cc-shadow-accent);
+  --evo-radius: var(--cc-radius-sm);
+  --evo-radius-sm: 6px;
+}

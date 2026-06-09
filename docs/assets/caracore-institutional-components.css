@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --cc-i-surface: #f8fafc;
   --cc-i-border: #dbe5ef;
   --cc-i-text: #203246;
@@ -6,7 +6,6 @@
   --cc-i-link: #0a6b85;
 }
 
-/* Apply only when page opts in with cc-i-page to avoid product visual drift */
 body.cc-i-page {
   color: var(--cc-i-text);
 }

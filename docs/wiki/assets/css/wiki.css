@@ -2,9 +2,9 @@
 /* Estilos responsivos para tablet, celular e desktop */
 
 :root {
-  --primary-color: #0d6efd;
-  --secondary-color: #6c757d;
-  --success-color: #198754;
+  --primary-color: #2563eb;
+  --secondary-color: #0f766e;
+  --success-color: #10b981;
   --info-color: #0dcaf0;
   --warning-color: #ffc107;
   --danger-color: #dc3545;
@@ -36,8 +36,8 @@
   --hover-bg: rgba(15, 23, 42, 0.04);
   --code-bg: #f1f5f9;
   --code-text: #0f172a;
-  --link-color: #1d4ed8;
-  --link-hover: #1e40af;
+  --link-color: #2563eb;
+  --link-hover: #1d4ed8;
   --footer-bg: #eef2f7;
   --footer-text: #334155;
 }
@@ -108,7 +108,7 @@ body {
 
 /* Navegaçéo */
 .wiki-nav {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%);
   box-shadow: var(--box-shadow);
   position: sticky;
   top: 0;
@@ -121,6 +121,23 @@ body {
 .wiki-nav .theme-toggle-btn {
   position: relative;
   z-index: 1;
+}
+
+.wiki-alert-brand {
+  border-left: 4px solid var(--secondary-color);
+}
+
+.wiki-btn-brand {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: #ffffff;
+}
+
+.wiki-btn-brand:hover,
+.wiki-btn-brand:focus {
+  background-color: #0d6560;
+  border-color: #0d6560;
+  color: #ffffff;
 }
 
 /* Suaviza contrastes do tema claro em headers com gradiente */

@@ -6,7 +6,7 @@ A proteção de dados no Helianto Condominium segue rígidos padrões de privaci
 
 ## Controles Aplicados
 
-1. **LogSanitizer:**
+1. **PrivacyGuard (LGPD Shield):**
    Todos os logs gerados em tempo de execução passam por um filtro ativo de higienização. 
    - Números de telefone são mascarados.
    - CPFs/CNPJs são totalmente omitidos das mensagens de log.
