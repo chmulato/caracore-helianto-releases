@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://helianto.caracore.com.br/">
+    <title>Download de Templates e Guias — Helianto Condominium | Cara Core Informática</title>
+    <meta name="description" content="Download dos templates de deploy do Helianto Condominium: Docker Compose, Caddyfile e Nginx. Requisitos e guias de instalação para VPS e nuvem.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/caracore-core-typography.css">
+    <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
+</head>
+<body class="download-page">
+    <div class="wrapper">
+        <nav class="breadcrumb" aria-label="Navegação">
+            <a href="index.html">Helianto Condominium — Loja</a>
+            <span> · </span>
+            <a href="index.html">Helianto Condominium</a>
+            <span> · </span>
+            <span>Download e Deploy</span>
+        </nav>
+
+        <!-- Lançamento oficial — 30/12/2026 -->
+        <section class="cso-launch-banner" aria-label="Data de lançamento" style="background: linear-gradient(135deg, #1e3a8a, #0f766e); color: white;">
+            <p class="cso-launch-label" style="background: #10b981;">Lançamento oficial</p>
+            <p class="cso-launch-date">Arquivos de Deploy Helianto Condominium — <strong>30 de dezembro de 2026</strong>.</p>
+        </section>
+
+        <header>
+            <h1>Download e Deploy — Helianto Condominium</h1>
+            <p>Infraestrutura pronta para VPS e Nuvem (Docker Compose, Caddy e Nginx)</p>
+        </header>
+
+        <p class="download-notice" style="margin-bottom: 1rem;">O sistema é implantado de forma autônoma utilizando contêineres Docker, garantindo a sua <strong>soberania de dados</strong> e facilidade de manutenção.</p>
+
+        <section class="card" style="border-left: 4px solid #10b981; background: var(--bg-card); padding: 24px; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 32px;">
+            <h3>Como subir em produção (Docker Compose)</h3>
+            <p>Os arquivos prontos de infraestrutura estão disponíveis para download direto do nosso repositório de desenvolvimento no GitHub. Você também pode copiar as instruções básicas de deploy abaixo:</p>
+            
+            <p><strong>Fluxo de Deploy Rápido:</strong></p>
+            <ol>
+                <li>Instale o Docker e o Docker Compose em sua VPS Linux.</li>
+                <li>Baixe o template <a href="https://raw.githubusercontent.com/chmulato/caracore-helianto/master/docker-compose.prod.yml" target="_blank" rel="noopener">docker-compose.prod.yml</a>.</li>
+                <li>Configure as variáveis de ambiente necessárias em um arquivo <code>.env</code> local.</li>
+                <li>Inicie os serviços: <code>docker compose -f docker-compose.prod.yml up -d</code></li>
+            </ol>
+            
+            <p>Abaixo estão os templates de proxy e infraestrutura do ecossistema:</p>
+            <div style="margin-top: 15px; display: flex; flex-wrap: wrap; gap: 10px;">
+                <a href="https://raw.githubusercontent.com/chmulato/caracore-helianto/master/docker-compose.prod.yml" target="_blank" class="cta-btn cta-btn-primary" style="background-color: #0f766e;">docker-compose.prod.yml</a>
+                <a href="https://raw.githubusercontent.com/chmulato/caracore-helianto/master/Caddyfile" target="_blank" class="cta-btn cta-btn-secondary">Caddyfile (SSL Autônomo)</a>
+                <a href="https://raw.githubusercontent.com/chmulato/caracore-helianto/master/nginx.conf" target="_blank" class="cta-btn cta-btn-secondary">nginx.conf (Proxy reverso)</a>
+            </div>
+        </section>
+
+        <section class="card" style="border-left: 4px solid #3b82f6; background: var(--bg-card); padding: 24px; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 32px;">
+            <h3>Requisitos do Servidor (Recomendado)</h3>
+            <ul>
+                <li><strong>Sistema Operacional:</strong> Ubuntu Server 22.04 LTS ou superior (64-bit)</li>
+                <li><strong>Mínimo:</strong> 1 vCPU, 2 GB RAM (para uso leve / homologação)</li>
+                <li><strong>Recomendado:</strong> 2 vCPUs, 4 GB RAM (operações ativas em produção)</li>
+                <li><strong>Armazenamento:</strong> 20 GB de espaço SSD</li>
+                <li><strong>Software:</strong> Docker Engine 24.0+ e Docker Compose v2.0+ instalado</li>
+            </ul>
+        </section>
+
+        <section class="card" style="border-left: 4px solid #f59e0b; background: var(--bg-card); padding: 24px; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 32px;">
+            <h3>Verificação e Segurança</h3>
+            <p>O back-end do Helianto Condominium utiliza segurança ativa de banco de dados e higienizador de logs em tempo real (LogSanitizer). Certifique-se de que a porta <code>5432</code> do banco PostgreSQL não seja exposta publicamente na internet (os templates de Docker fornecidos já asseguram essa proteção).</p>
+        </section>
+
+        <nav class="download-back">
+            <a href="index.html" class="cta-btn cta-btn-secondary">← Voltar para apresentação</a>
+            <a href="canal-feedback.html" class="cta-btn cta-btn-secondary">Canal de feedback</a>
+            <a href="index.html" class="cta-btn cta-btn-secondary">Apresentação na loja</a>
+        </nav>
+    </div>
+
+    <script src="assets/js/main.js?v=20260404-2"></script>
+</body>
+</html>

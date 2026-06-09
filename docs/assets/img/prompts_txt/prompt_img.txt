@@ -1,0 +1,36 @@
+# Prompts para Geração de Imagens - CSOnline RC-1 Vitrine
+
+## Imagem Principal da Vitrine (docs/assets/img/vitrine-main.jpg)
+Prompt: "A dynamic illustration of a medium-sized Brazilian transportation company in action: a fleet of trucks navigating rural roads in the Brazilian countryside with mountains and palm trees in the background, symbolizing logistics and delivery. In the foreground, a glowing digital interface on a tablet showing offline data management with SQLite icons, JavaFX UI elements, and secure local storage symbols. Overlay subtle elements of resilience: a shield protecting data from cloud dependency, a localhost server icon, and Microsoft/GitHub badges. The scene conveys reliability, innovation, and sovereignty for medium enterprises facing connectivity challenges in emerging markets. High resolution, professional digital art, warm Brazilian colors with tech blue accents."
+
+## Imagem do Cara Core CSO (docs/assets/img/caracore-cso.png)
+Prompt: "A professional logo-style image for 'Cara Core CSO' featuring the text 'Cara Core' with 'CSO' as an acronym, integrated with tech icons like a shield for security, a database icon for SQLite, JavaFX UI elements, and subtle Brazilian elements like a palm tree or road motif. Modern, clean design with blue and green gradients, high resolution PNG, suitable for branding and web use."
+
+## Imagem para Identificação do Cliente com o Produto (docs/assets/img/caracore-cso-to-customers.png)
+Prompt: "An empathetic illustration showing a Brazilian transport company owner looking relieved and confident, holding a tablet with CSOnline interface displaying secure offline data, while in the background, trucks are running smoothly on roads, and subtle icons of connectivity issues (broken wifi) are fading away. Include elements like a shield over data, localhost icon, and text overlays like 'Soberania Local' and 'Resiliência Offline'. Warm, relatable colors, high resolution, designed to make medium-sized business owners feel understood and empowered by the product."
+
+## Background Principal (docs/assets/img/background.jpg)
+Prompt: "A futuristic cityscape at night with glowing blue and purple lights, representing technology and innovation, with subtle Minecraft-style blocks in the foreground, high resolution, digital art."
+
+## Ícone de Foguete (docs/assets/img/rocket-icon.png)
+Prompt: "A sleek rocket icon with glowing effects, inspired by space exploration and AI creativity, simple and modern, transparent background."
+
+## Ícone de Bloco Minecraft (docs/assets/img/block-icon.png)
+Prompt: "A pixelated Minecraft block icon with creative colors, representing building and fun, 64x64 pixels, PNG format."
+
+## Ícone de IA (docs/assets/img/ai-icon.png)
+Prompt: "An abstract AI brain icon with circuit patterns and glowing nodes, symbolizing intelligence and creativity, minimalist design."
+
+## Logo Cara Core (docs/assets/img/logo.png)
+Prompt: "A professional logo for 'Cara Core Informática' with tech elements, blue and green colors, clean typography, high quality."
+
+## Imagem de Fundo para Seções (docs/assets/img/section-bg.jpg)
+Prompt: "Abstract background with gradients of blue and tech patterns, suitable for web sections, subtle and professional."
+
+## Ícone de Download (docs/assets/img/download-icon.png)
+Prompt: "A download arrow icon with modern design, glowing effect, for web use."
+
+## Ícone de Feedback (docs/assets/img/feedback-icon.png)
+Prompt: "A speech bubble icon with feedback elements, friendly and inviting, for user interaction."
+
+Nota: Todas as imagens devem ser otimizadas para web, com tamanhos apropriados e formatos PNG/JPG para melhor performance.

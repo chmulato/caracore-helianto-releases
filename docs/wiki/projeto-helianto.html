@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helianto Condominium — Wiki da aplicação | Loja oficial</title>
+  <meta name="description" content="Wiki técnica do Helianto Condominium: SaaS condominial, Java 25, Spring Boot 4, PostgreSQL, multi-tenancy.">
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/wiki.css">
+  <link rel="stylesheet" href="assets/css/wiki-unified.css">
+  <link rel="icon" href="../assets/images/favicon.ico" type="image/ico">
+  <link rel="stylesheet" href="/assets/caracore-core-typography.css">
+  <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark wiki-nav" style="background-color: #0f766e;">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-journal-code"></i> Wiki da loja</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarWiki" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarWiki">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html"><i class="bi bi-shop"></i> Loja</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-journal-text"></i> Wiki (início)</a></li>
+          <li class="nav-item"><a class="nav-link active" href="projeto-helianto.html" aria-current="page"><i class="bi bi-file-earmark-text"></i> Documentação</a></li>
+          <li class="nav-item"><a class="nav-link" href="../download.html"><i class="bi bi-download"></i> Download</a></li>
+          <li class="nav-item"><a class="nav-link" href="../canal-feedback.html"><i class="bi bi-chat-dots"></i> Canal de feedback</a></li>
+          <li class="nav-item"><a class="nav-link" href="../manual/index.html"><i class="bi bi-book"></i> Manual completo (loja)</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="wiki-breadcrumb">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="../index.html">Loja</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Wiki</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Helianto Condominium</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <div class="wiki-container">
+    <div class="row">
+      <div class="col-lg-3 col-md-4 mb-4">
+        <div class="wiki-sidebar">
+          <h4><i class="bi bi-list-ul"></i> Nesta loja</h4>
+          <ul class="wiki-menu">
+            <li><a href="index.html"><i class="bi bi-journal-text"></i> Início do wiki</a></li>
+            <li><a href="projeto-helianto.html" class="active"><i class="bi bi-file-earmark-text"></i> Documentação do produto</a></li>
+            <li><a href="../download.html"><i class="bi bi-box-arrow-down"></i> Download e Deploy</a></li>
+            <li><a href="../canal-feedback.html"><i class="bi bi-chat-dots"></i> Canal de feedback</a></li>
+            <li><a href="../manual/index.html"><i class="bi bi-book"></i> Manual completo (loja)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-9 col-md-8">
+        <div class="wiki-content">
+          <h1><i class="bi bi-building"></i> Helianto Condominium</h1>
+          <p class="text-muted">Administração e Soberania de Dados na Reconstrução do SaaS Condominial.</p>
+          <div class="card bg-dark border-secondary text-light mb-3">
+            <div class="card-body">
+              <h2 class="h5">Resumo técnico</h2>
+              <p class="mb-0">Java 25, Spring Boot 4.0.6, PostgreSQL Multi-tenant. Automação de juros e multas por rateio pro rata die, BolePix integrado e segurança de logs com LogSanitizer.</p>
+            </div>
+          </div>
+          <p>Esta é a wiki de releases da loja (<span lang="en">helianto.caracore.com.br</span>). O manual de implantação completo está disponível em: <a href="../manual/index.html">manual nesta loja</a>.</p>
+          
+          <h2 class="h4 mt-4">Arquitetura de Isolamento de Dados</h2>
+          <p>O back-end do Helianto Condominium assegura isolamento lógico absoluto no banco PostgreSQL através de filtros automáticos de tenant baseados no cabeçalho HTTP do token JWT. O isolamento atende a requisitos regulamentares da LGPD, prevenindo vazamentos de relatórios contábeis e informações pessoais.</p>
+          
+          <h2 class="h4 mt-4">Regras de Negócio e Cálculos Contábeis</h2>
+          <p>Diferente de sistemas legados que utilizam juros simples ou planilhas suscetíveis a erros humanos, o motor financeiro do Helianto realiza os cálculos de multa de 2% e juros de 1% ao mês pro rata die via código compilado seguro, gerenciando contas separadas para fundos ordinários, extraordinários e de reserva.</p>
+          
+          <p class="mt-4"><a href="../index.html" class="btn btn-outline-primary btn-sm">Voltar à loja</a> <a href="../canal-feedback.html" class="btn btn-outline-secondary btn-sm">Canal de feedback</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
