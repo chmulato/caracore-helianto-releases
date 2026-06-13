@@ -27,15 +27,15 @@ Principais capacidades:
 2. **Banco de dados:** PostgreSQL com isolamento tenant context.
 3. **Deploy:** Templates prontos de Docker Compose, Caddy Server (HTTPS automático) e Nginx.
 4. **Segurança:** Autenticação via JWT, higienização automática com PrivacyGuard (LGPD Shield).
-5. **Distribuição:** Vitrine em https://chmulato.github.io/caracore-helianto-releases/ (GitHub Pages).
+5. **Distribuição:** Vitrine em https://helianto.caracore.com.br/ (GitHub Pages).
 
 ## Download e Deploy
 
 Página da loja:
-https://chmulato.github.io/caracore-helianto-releases/
+https://helianto.caracore.com.br/
 
 Canal de download e guias de infra:
-https://chmulato.github.io/caracore-helianto-releases/download.html
+https://helianto.caracore.com.br/download.html
 
 ## Canais de Suporte
 

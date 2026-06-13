@@ -9,7 +9,7 @@
 
 ## Fontes Oficiais de Download
 
-1. Loja de Releases: https://chmulato.github.io/caracore-helianto-releases/
+1. Loja de Releases: https://helianto.caracore.com.br/
 2. Repositório de Releases: https://github.com/chmulato/caracore-helianto-releases
 3. Templates de deploy: disponíveis na página de [Download e Deploy](../download.html) nesta loja.
 
@@ -49,3 +49,4 @@
 
 1. Mantenha a porta `5432` do banco PostgreSQL protegida internamente (não exposta no firewall público).
 2. Configure logs externos ou backups diários automáticos para o volume de dados do PostgreSQL.
+
