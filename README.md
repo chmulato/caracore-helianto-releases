@@ -47,7 +47,7 @@ https://helianto.caracore.com.br/download.html
 
 1. **Fase:** Active Development / Seed.
 2. **Versão:** v1.0.0.
-3. **Data de lançamento planejada:** 30 de dezembro de 2027.
+3. **Data de lançamento planejada:** 30 de dezembro de 2029.
 4. **Qualidade:** Cobertura de testes automatizados de 81% assegurada via JaCoCo.
 
 ## Licença
