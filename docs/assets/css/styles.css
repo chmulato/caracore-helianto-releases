@@ -21,7 +21,7 @@ body.cc-i-page {
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px 6rem;
 }
 
 header {
@@ -350,6 +350,16 @@ section {
 .helianto-status-text {
     color: var(--cc-text-muted);
     font-size: var(--cc-font-size-sm);
+}
+
+.helianto-status-text::before {
+    content: "· ";
+}
+
+@media (max-width: 480px) {
+    .helianto-status-text::before {
+        content: none;
+    }
 }
 
 .helianto-countdown {
@@ -766,11 +776,6 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 0.65rem;
-}
-
-.page-feedback .wrapper,
-.download-page .wrapper {
-    padding-bottom: 2rem;
 }
 
 .requirements-section ul,
