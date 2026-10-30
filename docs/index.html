@@ -3,14 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Helianto Condominium — Vitrine de Lançamento e Releases | Cara Core Informática</title>
-    <meta name="description" content="O Helianto Condominium é um sistema completo para administração condominial com soberania de dados e motor financeiro auditável.">
+    <title>Helianto Condominium — em desenvolvimento, lançamento 30/12/2029 | Cara Core Informática</title>
+    <meta name="description" content="Helianto Condominium é um sistema de gestão condominial em desenvolvimento pela Cara Core Informática, com GA público previsto para 30/12/2029. Hoje há apenas templates de infraestrutura para avaliação técnica.">
+    <link rel="canonical" href="https://helianto.caracore.com.br/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Cara Core Informática">
+    <meta property="og:title" content="Helianto Condominium — em desenvolvimento, lançamento 30/12/2029">
+    <meta property="og:description" content="Sistema de gestão condominial em desenvolvimento. GA público previsto para 30/12/2029. Hoje: apenas templates de infraestrutura para avaliação técnica.">
+    <meta property="og:url" content="https://helianto.caracore.com.br/">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/caracore-tokens.css">
     <link rel="stylesheet" href="assets/caracore-core-typography.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/caracore-institutional-components.css">
     <link rel="stylesheet" href="assets/evolution-status/evolution-status.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Helianto Condominium",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Linux (VPS ou nuvem privada)",
+        "softwareVersion": "em desenvolvimento",
+        "releaseNotes": "Em desenvolvimento. GA público da v1.0.0 previsto para 30/12/2029.",
+        "url": "https://helianto.caracore.com.br/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Cara Core Informática",
+            "url": "https://www.caracore.com.br/",
+            "taxID": "23.969.028/0001-37"
+        }
+    }
+    </script>
 </head>
 <body class="cc-i-page">
     <div class="wrapper">
@@ -22,124 +46,135 @@
             <span>Helianto Condominium — Loja</span>
         </nav>
 
-        <section class="cso-launch-banner cso-launch-banner--official" aria-label="Data de lançamento">
-            <p class="cso-launch-label">Lançamento oficial</p>
-            <p class="cso-launch-date">Lançamento oficial da versão de produção v1.0.0 agendado para <strong>30 de dezembro de 2029</strong>. Templates de infraestrutura e releases de testes disponíveis abaixo.</p>
-        </section>
-
-        <section class="cso-launch-banner cso-launch-banner--sovereignty" aria-label="Política institucional">
-            <p class="cso-launch-label">Soberania de Dados</p>
-            <p class="cso-launch-date">Os dados são e sempre serão do cliente. O Helianto Condominium permite que você hospede a aplicação em sua infraestrutura local (VPS) ou em qualquer provedor de nuvem, mantendo o controle total de sua operação.</p>
+        <section class="helianto-banner helianto-banner--official" aria-label="Status do lançamento">
+            <p class="helianto-banner-label">Lançamento previsto</p>
+            <p class="helianto-banner-text">Lançamento oficial da v1.0.0 previsto para <strong>30 de dezembro de 2029</strong>. Hoje publicamos apenas templates de infraestrutura (Docker Compose, Caddy, Nginx) para avaliação técnica — <strong>ainda não há release do aplicativo</strong>.</p>
         </section>
 
         <section class="hero-cta" aria-label="O que é o Helianto Condominium?">
-            <p class="hero-label">SaaS Condominial de Alta Performance</p>
-            <h2 class="hero-title">Engenharia de elite e soberania para a gestão de condomínios.</h2>
-            <p class="hero-desc">O <strong>Helianto Condominium</strong> é um sistema robusto desenvolvido sob medida para respeitar a complexidade contábil e a privacidade de dados das organizações. Sem caixas-pretas ou lentidão: uma arquitetura focada no controle de custos e integridade.</p>
+            <p class="hero-label">Em breve no catálogo · SaaS condominial self-hosted</p>
+            <p class="helianto-status-line"><span class="helianto-status-pill">Em desenvolvimento</span> <span class="helianto-status-text">· GA público previsto: 30/12/2029</span></p>
+            <h1 class="hero-title">Soberania de dados e integridade contábil para a gestão de condomínios.</h1>
+            <p class="hero-desc">O <strong>Helianto Condominium</strong> está em desenvolvimento pela Cara Core Informática. O objetivo é uma plataforma que respeite a complexidade contábil e a privacidade de dados, com arquitetura voltada ao controle de custos e à integridade dos números — sem caixas-pretas.</p>
 
-            <p class="hero-tagline">Benefícios diretos que entregamos:</p>
-            <div class="hero-pillars">
-                <div class="hero-pillar-item hero-pillar-item--blue">
-                    <strong>🔐 Controle Total</strong>
-                    <span>Seus dados hospedados na sua própria infraestrutura, com independência total de terceiros.</span>
-                </div>
-                <div class="hero-pillar-item hero-pillar-item--green">
-                    <strong>⚡ Velocidade Real</strong>
-                    <span>Interface mobile-first otimizada e responsiva, sem telas lentas ou processos travados.</span>
-                </div>
-                <div class="hero-pillar-item hero-pillar-item--amber">
-                    <strong>💰 Financeiro Preciso</strong>
-                    <span>Motor contábil com rateios automáticos, fundos segmentados e conciliação em segundos.</span>
-                </div>
+            <div class="helianto-countdown">
+                <span class="helianto-countdown-label">Dias até o GA previsto</span>
+                <span id="countdown">—</span>
             </div>
 
             <div class="cta-buttons">
-                <a href="canal-feedback.html" class="cta-btn cta-btn-primary">Solicitar demonstração ↘</a>
-                <a href="download.html" class="cta-btn cta-btn-secondary">Baixar release de teste ⬇</a>
-                <a href="canal-feedback.html" class="cta-btn cta-btn-secondary">Falar com a equipe técnica 💬</a>
+                <a href="mailto:suporte@caracore.com.br?subject=Lista%20de%20interesse%20%E2%80%94%20Helianto%20Condominium" class="cta-btn cta-btn-primary">Quero ser avisado do lançamento</a>
+                <a href="#roadmap" class="cta-btn cta-btn-secondary">Acompanhar o roadmap</a>
+                <a href="canal-feedback.html" class="cta-btn cta-btn-secondary">Falar com a Cara Core</a>
             </div>
-            <p class="tagline">Oficina: caracore-helianto · Loja: canal oficial de releases · Lançamento em 30 de dezembro de 2029.</p>
+            <p class="tagline">Sem promessa de acesso antecipado: a lista de interesse recebe apenas os avisos de lançamento. Preço e planos: a definir.</p>
+
+            <p class="hero-tagline">Benefícios que estamos construindo:</p>
+            <div class="hero-pillars">
+                <div class="hero-pillar-item hero-pillar-item--blue">
+                    <strong>🔐 Controle dos dados</strong>
+                    <span>Arquitetura desenhada para hospedagem na sua própria infraestrutura, sem dependência de terceiros para operar.</span>
+                </div>
+                <div class="hero-pillar-item hero-pillar-item--green">
+                    <strong>⚡ Interface web responsiva</strong>
+                    <span>Front em Web Components com interface responsiva — em desenvolvimento.</span>
+                </div>
+                <div class="hero-pillar-item hero-pillar-item--amber">
+                    <strong>💰 Financeiro auditável</strong>
+                    <span>Rateios automáticos, fundos segmentados e conciliação em uma base contábil única — em validação.</span>
+                </div>
+            </div>
         </section>
 
         <section class="section-block">
-            <h2>Para quem é o Helianto Condominium?</h2>
-            <p class="text-muted">Desenhado para simplificar e trazer conformidade jurídica à gestão.</p>
+            <h3>Por que um produto de 2029 já tem vitrine?</h3>
+            <p>Publicamos cedo para validar requisitos com administradoras e síndicos e mostrar o roadmap com transparência. A Cara Core desenvolve um produto pesado por vez.</p>
+        </section>
+
+        <section class="helianto-banner helianto-banner--sovereignty" aria-label="Política institucional">
+            <p class="helianto-banner-label">Soberania de Dados</p>
+            <p class="helianto-banner-text">O desenho do produto parte do princípio de que os dados são do cliente: a aplicação está prevista para rodar na infraestrutura local (VPS) do condomínio ou em qualquer provedor de nuvem, mantendo o controle da operação.</p>
+        </section>
+
+        <section class="section-block">
+            <h2>Para quem o Helianto Condominium está sendo desenhado?</h2>
+            <p class="text-muted">Perfis que orientam os requisitos do produto — todos em desenvolvimento.</p>
             <div class="audience-grid">
                 <div class="audience-card">
                     <h4>Administradoras</h4>
-                    <p>Controle centenas de condomínios com isolamento absoluto de dados e geração automatizada de relatórios contábeis.</p>
+                    <p>Operação de vários condomínios com separação de dados por tenant e geração de relatórios contábeis padronizados.</p>
                 </div>
                 <div class="audience-card">
                     <h4>Síndicos Profissionais</h4>
-                    <p>Gerencie com transparência, apresentando relatórios de receitas e despesas em tempo real e de forma auditável.</p>
+                    <p>Prestação de contas com relatórios de receitas e despesas auditáveis, previstos para consulta a qualquer momento.</p>
                 </div>
                 <div class="audience-card">
                     <h4>Condomínios Autogeridos</h4>
-                    <p>Ferramentas simples e eficientes para rateio, avisos e emissão de BolePix sem a complexidade de sistemas inflados.</p>
+                    <p>Rateio, avisos e emissão de BolePix sem a complexidade de sistemas inflados.</p>
                 </div>
                 <div class="audience-card">
                     <h4>Empresas de Tecnologia</h4>
-                    <p>Mantenha a soberania absoluta dos dados (SaaS self-hosted) e decida onde hospedar de forma financeiramente saudável.</p>
+                    <p>SaaS self-hosted, com decisão sobre onde hospedar e previsibilidade de custo de infraestrutura.</p>
                 </div>
             </div>
         </section>
 
         <section class="section-block-alt">
-            <h3>Por trás do código: Por que criamos o Helianto?</h3>
-            <p class="text-muted">Síndicos e administradoras perdem horas tentando conciliar dados inconsistentes provenientes de sistemas obsoletos. Receber três versões diferentes do mesmo relatório contábil é uma dor real que gera desconfiança. O Helianto Condominium elimina essa dor com um motor financeiro rígido compilado, segregação real de fundos e automação de alertas de WhatsApp. A engenharia deve simplificar a governança, não trazer insegurança.</p>
+            <h3>Por trás do código: por que criamos o Helianto Condominium?</h3>
+            <p class="text-muted">Síndicos e administradoras perdem horas tentando conciliar dados inconsistentes provenientes de sistemas obsoletos. Receber três versões diferentes do mesmo relatório contábil é uma dor real que gera desconfiança. O Helianto Condominium foi desenhado para atacar esse problema com um motor financeiro determinístico, segregação de fundos e automação de alertas. A engenharia deve simplificar a governança, não trazer insegurança.</p>
         </section>
 
         <section class="section-block">
-            <h2>Recursos Detalhados</h2>
-            <p class="text-muted">Explore os módulos divididos por áreas críticas de operação:</p>
+            <h2>Recursos em desenvolvimento</h2>
+            <p class="text-muted">Módulos previstos por áreas críticas de operação. Nenhum deles está disponível para uso em produção hoje.</p>
             <div class="features-container">
                 <div class="feature-block-card feature-block-card--blue">
                     <span class="badge-theme badge-security">Segurança &amp; Soberania</span>
-                    <h3>🔐 Proteção Absoluta</h3>
+                    <h3>🔐 Isolamento de dados</h3>
                     <ul>
                         <li>
-                            <strong>Multi-tenant real (PostgreSQL):</strong> Dados de moradores e boletos de cada condomínio estão matematicamente isolados no banco. <em>Evita o risco de vazamento cruzado de dados confidenciais.</em>
+                            <strong>Multi-tenant em PostgreSQL:</strong> separação de dados de moradores e boletos por condomínio via contexto de tenant. <em>Objetivo: evitar vazamento cruzado de dados confidenciais.</em>
                         </li>
                         <li>
-                            <strong>PrivacyGuard (LGPD Shield):</strong> Higieniza telefones, CPFs e criptografa IPs nos logs em tempo real. <em>Garante conformidade estrita sem penalizar a performance da CPU.</em>
+                            <strong>PrivacyGuard (LGPD Shield):</strong> higienização de telefones e CPFs e tratamento de IPs nos logs. <em>Desenhado para apoiar a conformidade com a LGPD.</em>
                         </li>
                         <li>
-                            <strong>Hospedagem Própria (Self-Hosted):</strong> Suba na sua VPS ou nuvem privada. <em>Você é dono legítimo da sua base de dados.</em>
+                            <strong>Hospedagem própria (self-hosted):</strong> previsão de execução em VPS ou nuvem privada. <em>A base de dados fica sob o controle do cliente.</em>
                         </li>
                     </ul>
                 </div>
 
                 <div class="feature-block-card feature-block-card--green">
                     <span class="badge-theme badge-finance">Financeiro &amp; Cobrança</span>
-                    <h3>💰 Integridade Contábil</h3>
+                    <h3>💰 Integridade contábil</h3>
                     <ul>
                         <li>
-                            <strong>Motor de Rateio Dinâmico:</strong> Calcula automaticamente cotas por fração ideal ou divisão igualitária. <em>Evita erros de cálculo e divergências no fechamento mensal.</em>
+                            <strong>Motor de rateio dinâmico:</strong> cotas por fração ideal ou divisão igualitária. <em>Objetivo: reduzir erros de cálculo e divergências no fechamento mensal.</em>
                         </li>
                         <li>
-                            <strong>Juros &amp; Multas Automáticos:</strong> Multa fixa de 2% e juros pro rata die de 1% ao mês em concordância com o Código Civil brasileiro.
+                            <strong>Juros &amp; multas automáticos:</strong> multa fixa de 2% e juros pro rata die de 1% ao mês, em linha com o Código Civil brasileiro.
                         </li>
                         <li>
-                            <strong>Régua de Cobrança e Alertas:</strong> Lembretes automáticos pré e pós-vencimento. <em>Garante a redução de inadimplência activa.</em>
+                            <strong>Régua de cobrança e alertas:</strong> lembretes automáticos pré e pós-vencimento. <em>Desenhado para apoiar a redução da inadimplência ativa.</em>
                         </li>
                         <li>
-                            <strong>BolePix Nativo:</strong> Pagamento instantâneo via Pix ou boleto. <em>Reduz as taxas de cobrança bancária e acelera a conciliação de caixa.</em>
+                            <strong>BolePix nativo:</strong> pagamento via Pix ou boleto. <em>Objetivo: reduzir taxas de cobrança bancária e acelerar a conciliação de caixa.</em>
                         </li>
                     </ul>
                 </div>
 
                 <div class="feature-block-card feature-block-card--amber">
                     <span class="badge-theme badge-infra">Engenharia &amp; Infra</span>
-                    <h3>⚙️ Robustez de Sistemas</h3>
+                    <h3>⚙️ Base técnica</h3>
                     <ul>
                         <li>
-                            <strong>Stack Sênior:</strong> Desenvolvido com Java 25 (LTS) e Spring Boot 4.0.6. <em>Estabilidade operacional e atualizações previsíveis.</em>
+                            <strong>Base técnica:</strong> Java 25 (LTS) e Spring Boot 4.0.6. <em>Estabilidade operacional e atualizações previsíveis.</em>
                         </li>
                         <li>
-                            <strong>Orquestração de Containeres:</strong> Deploy pronto com Docker Compose, Caddy (SSL automático) e Nginx. <em>Setup em VPS concluído em minutos.</em>
+                            <strong>Orquestração de contêineres:</strong> templates de Docker Compose, Caddy (SSL automático) e Nginx já publicados para avaliação técnica.
                         </li>
                         <li>
-                            <strong>Cobertura de Testes de 81%:</strong> Suíte de validação assegurada por JaCoCo. <em>Confiabilidade contínua antes de tocar a produção.</em>
+                            <strong>Cobertura de testes de 81%:</strong> suíte de validação via JaCoCo — medição interna, a atualizar.
                         </li>
                     </ul>
                 </div>
@@ -147,24 +182,24 @@
         </section>
 
         <section class="diferencial-raro-box">
-            <h3>O que o Helianto faz que outros não fazem</h3>
-            <p>Enquanto o mercado condominial oferece sistemas legados pesados ou gateways de pagamento centralizados com taxas ocultas, o Helianto se destaca por três diferenciais de engenharia únicos:</p>
+            <h3>O que o Helianto Condominium se propõe a fazer diferente</h3>
+            <p>Enquanto o mercado condominial oferece sistemas legados pesados ou gateways de pagamento centralizados com taxas ocultas, o Helianto Condominium é desenhado em torno de três diferenciais de engenharia:</p>
             <ul>
-                <li><strong>Isolamento Físico de Contexto:</strong> Bloqueios ThreadLocal impedem qualquer query de misturar dados entre tenants diferentes.</li>
-                <li><strong>Limpeza Ativa nos Logs (PrivacyGuard - LGPD Shield):</strong> Nenhum dado sensível de morador toca os arquivos de log do disco em formato claro.</li>
-                <li><strong>Soberania de Código:</strong> O sistema roda offline ou online sob o seu controle técnico direto, sem taxas abusivas de locação de infraestrutura.</li>
+                <li><strong>Isolamento de contexto por tenant:</strong> bloqueios de contexto (ThreadLocal) previstos para impedir que uma consulta misture dados entre tenants diferentes.</li>
+                <li><strong>Limpeza nos logs (PrivacyGuard - LGPD Shield):</strong> objetivo de impedir que dados sensíveis de morador sejam gravados em texto claro nos arquivos de log.</li>
+                <li><strong>Soberania de código:</strong> previsão de operação online ou offline sob controle técnico direto do cliente, sem dependência de infraestrutura de terceiros.</li>
             </ul>
         </section>
 
         <section class="section-block">
-            <h3>Especificações Técnicas de Engenharia</h3>
-            <p>O Helianto Condominium foi construído sob uma sólida base de engenharia de elite: <strong>Java 25 LTS</strong>, <strong>Spring Boot 4.0.6</strong>, <strong>PostgreSQL multi-tenant</strong> e <strong>81% de cobertura de testes</strong> via JaCoCo garantindo estabilidade e previsibilidade.</p>
+            <h3>Especificações técnicas previstas</h3>
+            <p>O Helianto Condominium está sendo construído sobre <strong>Java 25 LTS</strong>, <strong>Spring Boot 4.0.6</strong> e <strong>PostgreSQL multi-tenant</strong>, com <strong>81% de cobertura de testes</strong> via JaCoCo (medição interna, a atualizar).</p>
             <div class="specs-grid">
                 <div class="spec-item">
                     <strong>Plataforma:</strong><br>Nuvem Privada / VPS Linux
                 </div>
                 <div class="spec-item">
-                    <strong>Arquitetura:</strong><br>API-first / Web responsiva
+                    <strong>Arquitetura:</strong><br>API-first / Web Components (interface responsiva)
                 </div>
                 <div class="spec-item">
                     <strong>Banco de Dados:</strong><br>PostgreSQL com tenant context
@@ -175,60 +210,93 @@
             </div>
         </section>
 
-        <section class="section-block">
-            <h3>Linha do Tempo e Roadmap Visual</h3>
-            <p class="text-muted">Acompanhe a evolução do projeto e as próximas entregas técnicas:</p>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">Junho 2026</div>
-                    <strong>API &amp; Web Components</strong>
-                    <p>Módulos contábeis compilados e interface web responsiva implementados.</p>
+        <section class="section-block" id="roadmap">
+            <h2>Roadmap até 2029</h2>
+            <p class="text-muted">O que já existe e o que vem até o GA público. Onde não há data definida, está marcado como "a definir".</p>
+
+            <div class="roadmap-split">
+                <div class="roadmap-panel roadmap-panel--exists">
+                    <h3>O que já existe (jun/2026)</h3>
+                    <ul class="content-list">
+                        <li>API e componentes web dos módulos contábeis.</li>
+                        <li>Templates de deploy (compose, Caddyfile, nginx.conf) publicados.</li>
+                    </ul>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Junho 2026</div>
-                    <strong>Templates de Deploy Prontos</strong>
-                    <p>Estruturas de compose, Caddyfile e Nginx em produção.</p>
-                </div>
-                <div class="timeline-item pending">
-                    <div class="timeline-date">Sprint Atual</div>
-                    <strong>Testes de Segurança Local</strong>
-                    <p>Verificação de integridade, testes de firewall e automação de BolePix.</p>
-                </div>
-                <div class="timeline-item pending">
-                    <div class="timeline-date">30 de dezembro de 2029</div>
-                    <strong>Lançamento Oficial da Release v1.0.0</strong>
-                    <p>Disponibilização da release de produção oficial no ecossistema.</p>
+                <div class="roadmap-panel roadmap-panel--next">
+                    <h3>O que vem</h3>
+                    <ul class="content-list">
+                        <li>Testes de segurança local (sprint atual) — em desenvolvimento.</li>
+                        <li>Automação de BolePix — em desenvolvimento.</li>
+                        <li>Rateio, juros e régua de cobrança — em desenvolvimento.</li>
+                        <li>PrivacyGuard — em desenvolvimento.</li>
+                        <li>Multi-tenant — em desenvolvimento.</li>
+                    </ul>
                 </div>
             </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Jun/2026</div>
+                    <strong>Fundação: API, web components e templates de deploy</strong>
+                    <p>Módulos contábeis compilados e interface web responsiva implementados; templates de deploy publicados.</p>
+                    <span class="status-tag status-tag--done">Concluído</span>
+                </div>
+                <div class="timeline-item pending">
+                    <div class="timeline-date">2026 — sprint atual</div>
+                    <strong>Testes de segurança local</strong>
+                    <p>Verificação de integridade, testes de firewall e automação de BolePix.</p>
+                    <span class="status-tag status-tag--now">Em andamento</span>
+                </div>
+                <div class="timeline-item pending">
+                    <div class="timeline-date">2027</div>
+                    <strong>a definir</strong>
+                    <p>Escopo e marcos de 2027 serão publicados quando definidos.</p>
+                    <span class="status-tag status-tag--planned">Planejado</span>
+                </div>
+                <div class="timeline-item pending">
+                    <div class="timeline-date">2028</div>
+                    <strong>a definir</strong>
+                    <p>O ciclo de Agent da Cara Core está dedicado ao CSO Transportes.</p>
+                    <span class="status-tag status-tag--planned">Planejado</span>
+                </div>
+                <div class="timeline-item pending">
+                    <div class="timeline-date">2029 — ano civil</div>
+                    <strong>Ciclo principal de desenvolvimento do Helianto Condominium</strong>
+                    <p>Desenvolvimento do Helianto Condominium na Cara Core, depois do CSO Transportes.</p>
+                    <span class="status-tag status-tag--planned">Planejado</span>
+                </div>
+                <div class="timeline-item pending">
+                    <div class="timeline-date">30/12/2029</div>
+                    <strong>GA público: release v1.0.0 de produção</strong>
+                    <p>Lançamento oficial da versão de produção.</p>
+                    <span class="status-tag status-tag--target">Previsto</span>
+                </div>
+            </div>
+
+            <p class="note">Datas intermediárias, beta e piloto serão publicadas aqui quando definidas. Fonte: <a href="https://www.caracore.com.br/planning.html">planning.html</a> · <a href="https://www.caracore.com.br/ecosistema.html#roadmap">roadmap do ecossistema</a>.</p>
         </section>
 
         <section class="section-block">
-            <h3>Arquivos do Projeto</h3>
+            <h3>Arquivos do projeto</h3>
             <ul class="content-list">
                 <li><strong>Oficina de Desenvolvimento:</strong> repositório de desenvolvimento fechado da Cara Core Informática</li>
-                <li><strong>Loja de Releases:</strong> <a href="download.html">downloads de arquivos de deploy</a></li>
-                <li><strong>Wiki da aplicação:</strong> <a href="https://wiki.caracore.com.br/projeto-helianto.html">documentação de arquitetura e segurança</a></li>
+                <li><strong>Templates de infraestrutura:</strong> <a href="download.html">avaliação técnica (Docker Compose, Caddy, Nginx)</a> — não contêm o aplicativo</li>
+                <li><strong>Wiki do projeto:</strong> <a href="https://wiki.caracore.com.br/projeto-helianto.html">documentação de arquitetura e segurança</a></li>
             </ul>
         </section>
 
-        <footer class="cso-footer">
-            <p>Oficina: caracore-helianto · Loja: helianto.caracore.com.br · Lançamento: 30 de dezembro de 2029 · <a href="https://www.caracore.com.br/portfolio.html#caracore-helianto" rel="noopener">Portfólio Cara Core</a></p>
+        <footer class="helianto-footer">
             <p class="footer-legal">Cara Core Informática · CNPJ 23.969.028/0001-37 · <a href="https://www.caracore.com.br/">www.caracore.com.br</a> · <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a></p>
+            <p class="footer-links"><a href="https://www.caracore.com.br/portfolio.html#caracore-helianto" rel="noopener">Portfólio</a> · <a href="https://www.caracore.com.br/ecosistema.html#roadmap" rel="noopener">Ecossistema</a> · <a href="https://www.caracore.com.br/planning.html" rel="noopener">Planning</a> · <a href="https://wiki.caracore.com.br/projeto-helianto.html" rel="noopener">Wiki do projeto</a></p>
         </footer>
     </div>
 
-    <script src="assets/js/main.js?v=20260909-helianto-2029"></script>
-    <div class="evo-beta-wrap" aria-hidden="true">
-        <span class="evo-beta-badge" title="Loja oficial">Active
-            <span class="evo-beta-tooltip">Esta é a loja oficial de releases e guias de infraestrutura do Helianto Condominium.</span>
-        </span>
-    </div>
+    <script src="assets/js/main.js?v=20261030-helianto-2029"></script>
     <div class="evo-feedback-fab">
-        <a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Sugira uma melhoria pelo canal oficial">
+        <a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Falar com a Cara Core">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            Solicitar demonstração
+            Falar com a Cara Core
         </a>
     </div>
 </body>
 </html>
-

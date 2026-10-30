@@ -18,7 +18,7 @@ function updateCountdown() {
 
         countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     } else {
-        countdownElement.innerHTML = 'Lançamento Disponível!';
+        countdownElement.innerHTML = 'Data prevista alcançada — confira o roadmap';
     }
 }
 

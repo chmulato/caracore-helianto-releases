@@ -256,19 +256,19 @@ section {
 }
 
 /* Banners institucionais */
-.cso-launch-banner {
+.helianto-banner {
     border-radius: var(--cc-radius-lg);
     padding: var(--cc-space-lg) var(--cc-space-xl);
     margin-bottom: var(--cc-space-lg);
 }
 
-.cso-launch-banner--official {
+.helianto-banner--official {
     background: linear-gradient(135deg, var(--cc-primary-dark), var(--cc-secondary));
     color: #ffffff;
     border: none;
 }
 
-.cso-launch-banner--official .cso-launch-label {
+.helianto-banner--official .helianto-banner-label {
     display: inline-block;
     background: var(--cc-accent);
     color: #ffffff;
@@ -276,13 +276,13 @@ section {
     border-radius: var(--cc-radius-sm);
 }
 
-.cso-launch-banner--official .cso-launch-date {
+.helianto-banner--official .helianto-banner-text {
     color: #ffffff;
     font-size: 1.1rem;
     line-height: 1.5;
 }
 
-.cso-launch-banner--sovereignty {
+.helianto-banner--sovereignty {
     background: var(--cc-surface);
     border: 1px solid var(--cc-border);
     border-left: 5px solid var(--cc-primary);
@@ -290,15 +290,29 @@ section {
     margin-bottom: var(--cc-space-2xl);
 }
 
-.cso-launch-banner--sovereignty .cso-launch-label {
+.helianto-banner--sovereignty .helianto-banner-label {
     color: var(--cc-primary);
 }
 
-.cso-launch-banner--sovereignty .cso-launch-date {
+.helianto-banner--sovereignty .helianto-banner-text {
     color: var(--cc-text-body);
 }
 
-.cso-launch-label {
+.helianto-banner--warning {
+    background: linear-gradient(90deg, rgba(245, 158, 11, 0.12), rgba(37, 99, 235, 0.07));
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    border-left: 5px solid var(--cc-accent-warm);
+}
+
+.helianto-banner--warning .helianto-banner-label {
+    color: var(--cc-accent-warm);
+}
+
+.helianto-banner--warning .helianto-banner-text {
+    color: var(--cc-text);
+}
+
+.helianto-banner-label {
     margin: 0 0 0.35rem 0;
     font-weight: var(--cc-font-weight-heading);
     letter-spacing: 0.03em;
@@ -306,31 +320,62 @@ section {
     font-size: 0.78rem;
 }
 
-.cso-launch-date {
+.helianto-banner-text {
     margin: 0;
     color: var(--cc-text);
 }
 
-.cso-prelaunch-banner {
-    border: 1px solid rgba(245, 158, 11, 0.35);
-    border-left: 5px solid var(--cc-accent-warm);
-    border-radius: var(--cc-radius-md);
-    background: linear-gradient(90deg, rgba(245, 158, 11, 0.12), rgba(37, 99, 235, 0.07));
-    padding: 1rem 1.25rem;
+/* Status do produto */
+.helianto-status-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 0.75rem 0;
 }
 
-.cso-prelaunch-label {
-    margin: 0 0 0.35rem 0;
-    color: var(--cc-accent-warm);
+.helianto-status-pill {
+    display: inline-block;
+    padding: 0.2rem 0.65rem;
+    border-radius: var(--cc-radius-pill);
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.45);
+    color: var(--cc-accent-warm-hover);
+    font-size: 0.8rem;
     font-weight: var(--cc-font-weight-semibold);
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
-    font-size: 0.78rem;
 }
 
-.cso-prelaunch-title {
+.helianto-status-text {
+    color: var(--cc-text-muted);
+    font-size: var(--cc-font-size-sm);
+}
+
+.helianto-countdown {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin: 0 0 var(--cc-space-md) 0;
+    padding: 0.5rem 0.9rem;
+    background: var(--cc-bg-muted);
+    border: 1px solid var(--cc-border);
+    border-radius: var(--cc-radius-sm);
+}
+
+.helianto-countdown-label {
+    color: var(--cc-text-muted);
+    font-size: 0.85rem;
+    font-weight: var(--cc-font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.helianto-countdown #countdown {
     margin: 0;
-    color: var(--cc-text);
+    font-size: 1.15rem;
+    font-weight: var(--cc-font-weight-heading);
 }
 
 /* Hero e CTAs */
@@ -356,6 +401,8 @@ section {
     margin: 0 0 1rem 0;
     font-size: 2.5rem;
     line-height: var(--cc-line-height-heading);
+    border-bottom: 2px solid var(--cc-border);
+    padding-bottom: 0.5rem;
 }
 
 .hero-tagline {
@@ -689,75 +736,6 @@ section {
     text-decoration: underline;
 }
 
-/* Blocos CSO legados */
-.cso-content {
-    display: grid;
-    gap: 1.1rem;
-}
-
-.cso-overview,
-.cso-tech-specs,
-.cso-launch-info,
-.cso-links {
-    background: var(--cc-surface);
-    border: 1px solid var(--cc-border);
-    border-radius: var(--cc-radius-md);
-    padding: 1.1rem 1.2rem;
-}
-
-.cso-overview h3,
-.cso-tech-specs h3,
-.cso-launch-info h3,
-.cso-links h3 {
-    margin: 0 0 0.7rem 0;
-    color: var(--cc-primary);
-}
-
-.cso-overview p,
-.cso-tech-specs p,
-.cso-launch-info p,
-.cso-links li {
-    color: var(--cc-text-body);
-}
-
-.cso-links ul {
-    margin: 0;
-    padding-left: 1rem;
-}
-
-.cso-links a {
-    color: var(--cc-primary);
-    text-decoration: none;
-}
-
-.cso-links a:hover {
-    text-decoration: underline;
-}
-
-.cso-features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
-}
-
-.cso-feature-card {
-    background: var(--cc-surface);
-    border: 1px solid var(--cc-border);
-    border-radius: var(--cc-radius-md);
-    padding: 1rem;
-    box-shadow: var(--cc-shadow-sm);
-}
-
-.cso-feature-card h4 {
-    margin: 0 0 0.5rem 0;
-    color: var(--cc-primary);
-}
-
-.cso-feature-card p {
-    margin: 0;
-    color: var(--cc-text-body);
-}
-
 .specs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -890,7 +868,7 @@ section {
 }
 
 footer,
-.cso-footer {
+.helianto-footer {
     background: var(--cc-surface);
     border-top: 1px solid var(--cc-border);
     padding: var(--cc-space-xl);
@@ -902,19 +880,88 @@ footer,
 }
 
 footer p,
-.cso-footer p {
+.helianto-footer p {
     margin-bottom: 8px;
 }
 
 footer a,
-.cso-footer a {
+.helianto-footer a {
     color: var(--cc-primary);
     text-decoration: none;
 }
 
 footer a:hover,
-.cso-footer a:hover {
+.helianto-footer a:hover {
     text-decoration: underline;
+}
+
+.helianto-footer .footer-links {
+    margin-bottom: 0;
+}
+
+/* Roadmap */
+.roadmap-split {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--cc-space-lg);
+    margin: var(--cc-space-lg) 0 var(--cc-space-xl);
+}
+
+.roadmap-panel {
+    background: var(--cc-surface);
+    border: 1px solid var(--cc-border);
+    border-radius: var(--cc-radius-md);
+    padding: var(--cc-space-lg);
+    box-shadow: var(--cc-shadow-sm);
+}
+
+.roadmap-panel--exists {
+    border-left: 4px solid var(--cc-accent);
+}
+
+.roadmap-panel--next {
+    border-left: 4px solid var(--cc-accent-warm);
+}
+
+.roadmap-panel h3 {
+    color: var(--cc-primary);
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.roadmap-panel .content-list li {
+    color: var(--cc-text-body);
+}
+
+.status-tag {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: var(--cc-radius-pill);
+    font-size: 0.72rem;
+    font-weight: var(--cc-font-weight-semibold);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.status-tag--done {
+    background: var(--cc-badge-finance-bg);
+    color: var(--cc-badge-finance-text);
+}
+
+.status-tag--now {
+    background: var(--cc-badge-infra-bg);
+    color: var(--cc-badge-infra-text);
+}
+
+.status-tag--planned {
+    background: var(--cc-bg-muted);
+    color: var(--cc-text-subtle);
+}
+
+.status-tag--target {
+    background: var(--cc-badge-security-bg);
+    color: var(--cc-badge-security-text);
 }
 
 footer .soberania {
@@ -1012,7 +1059,6 @@ footer .apostila-rodape a {
         grid-template-columns: 1fr;
     }
 
-    .cso-features-grid,
     .specs-grid {
         grid-template-columns: 1fr;
     }

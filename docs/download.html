@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download de Templates e Guias — Helianto Condominium | Cara Core Informática</title>
-    <meta name="description" content="Download dos templates de deploy do Helianto Condominium: Docker Compose, Caddyfile e Nginx. Requisitos e guias de instalação para VPS e nuvem.">
+    <title>Templates de infraestrutura — avaliação técnica | Helianto Condominium</title>
+    <meta name="description" content="Templates de infraestrutura do Helianto Condominium (Docker Compose, Caddyfile e Nginx) para avaliação técnica. Não contêm o aplicativo; uso em produção só após a v1.0.0, prevista para 30/12/2029.">
+    <link rel="canonical" href="https://helianto.caracore.com.br/download.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Cara Core Informática">
+    <meta property="og:title" content="Templates de infraestrutura — avaliação técnica | Helianto Condominium">
+    <meta property="og:description" content="Docker Compose, Caddyfile e Nginx para avaliação técnica. Estes arquivos não contêm o aplicativo Helianto Condominium.">
+    <meta property="og:url" content="https://helianto.caracore.com.br/download.html">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/caracore-tokens.css">
     <link rel="stylesheet" href="assets/caracore-core-typography.css">
@@ -15,85 +21,83 @@
 <body class="download-page cc-i-page">
     <div class="wrapper">
         <nav class="breadcrumb" aria-label="Navegação">
+            <a href="https://www.caracore.com.br/">Cara Core Informática</a>
+            <span> · </span>
+            <a href="https://www.caracore.com.br/portfolio.html#caracore-helianto" rel="noopener">Portfólio</a>
+            <span> · </span>
             <a href="index.html">Helianto Condominium — Loja</a>
             <span> · </span>
-            <span>Cara Core Informática</span>
-            <span> · </span>
-            <span>Download e Deploy</span>
+            <span>Templates de infraestrutura</span>
         </nav>
 
-        <section class="cso-launch-banner cso-launch-banner--official" aria-label="Data de lançamento">
-            <p class="cso-launch-label">Lançamento oficial</p>
-            <p class="cso-launch-date">Arquivos de Deploy Helianto Condominium — <strong>30 de dezembro de 2029</strong>.</p>
+        <section class="helianto-banner helianto-banner--warning" aria-label="Aviso sobre os arquivos">
+            <p class="helianto-banner-label">Aviso</p>
+            <p class="helianto-banner-text">Estes arquivos <strong>não contêm o aplicativo Helianto Condominium</strong>. Uso em produção só após a v1.0.0 (30/12/2029).</p>
         </section>
 
         <header>
-            <h1>Download e Deploy — Helianto Condominium</h1>
-            <p class="subtitle">Infraestrutura pronta para VPS e Nuvem (Docker Compose, Caddy e Nginx)</p>
+            <h1>Templates de infraestrutura — avaliação técnica</h1>
+            <p class="subtitle">Docker Compose, Caddyfile e nginx.conf para montar um ambiente de avaliação. O aplicativo Helianto Condominium não está incluído.</p>
         </header>
 
-        <p class="download-notice">O sistema é implantado de forma autônoma utilizando contêineres Docker, garantindo a sua <strong>soberania de dados</strong> e facilidade de manutenção.</p>
+        <p class="download-notice">Os templates descrevem a infraestrutura prevista (contêineres Docker, proxy reverso e HTTPS automático) para que equipes técnicas avaliem o desenho de deploy antes do lançamento. Nada aqui está pronto para operação em produção.</p>
 
         <section class="card card--accent-green">
-            <h3>Como subir em produção (Docker Compose)</h3>
-            <p>Os arquivos prontos de infraestrutura estão disponíveis para download direto do nosso repositório de releases no GitHub. Você também pode copiar as instruções básicas de deploy abaixo:</p>
+            <h3>Como montar um ambiente de avaliação</h3>
+            <p>Os arquivos estão disponíveis para download direto no repositório de releases no GitHub. Para avaliar o desenho da infraestrutura:</p>
 
-            <p><strong>Fluxo de Deploy Rápido:</strong></p>
+            <p><strong>Fluxo de avaliação:</strong></p>
             <ol>
-                <li>Instale o Docker e o Docker Compose em sua VPS Linux.</li>
+                <li>Instale o Docker e o Docker Compose em uma VPS Linux de teste.</li>
                 <li>Baixe o template <a href="https://raw.githubusercontent.com/chmulato/caracore-helianto-releases/master/docker-compose.prod.yml" target="_blank" rel="noopener">docker-compose.prod.yml</a>.</li>
-                <li>Configure as variáveis de ambiente necessárias em um arquivo <code>.env</code> local.</li>
-                <li>Inicie os serviços: <code>docker compose -f docker-compose.prod.yml up -d</code></li>
+                <li>Revise as variáveis de ambiente e ajuste um arquivo <code>.env</code> local.</li>
+                <li>Valide o compose: <code>docker compose -f docker-compose.prod.yml config</code></li>
+                <li>Os serviços <code>api</code> e <code>web</code> dependem dos artefatos da aplicação, ainda não publicados. Para avaliar a rede, suba apenas o banco: <code>docker compose -f docker-compose.prod.yml up -d postgres</code></li>
             </ol>
 
-            <p>Abaixo estão os templates de proxy e infraestrutura do ecossistema:</p>
+            <p>Os templates de proxy e infraestrutura do ecossistema:</p>
             <div class="card-actions">
                 <a href="https://raw.githubusercontent.com/chmulato/caracore-helianto-releases/master/docker-compose.prod.yml" target="_blank" rel="noopener" class="cta-btn cta-btn-primary cta-btn--teal">docker-compose.prod.yml</a>
-                <a href="https://raw.githubusercontent.com/chmulato/caracore-helianto-releases/master/Caddyfile" target="_blank" rel="noopener" class="cta-btn cta-btn-secondary">Caddyfile (SSL Autônomo)</a>
-                <a href="https://raw.githubusercontent.com/chmulato/caracore-helianto-releases/master/nginx.conf" target="_blank" rel="noopener" class="cta-btn cta-btn-secondary">nginx.conf (Proxy reverso)</a>
+                <a href="https://raw.githubusercontent.com/chmulato/caracore-helianto-releases/master/Caddyfile" target="_blank" rel="noopener" class="cta-btn cta-btn-secondary">Caddyfile (SSL autônomo)</a>
+                <a href="https://raw.githubusercontent.com/chmulato/caracore-helianto-releases/master/nginx.conf" target="_blank" rel="noopener" class="cta-btn cta-btn-secondary">nginx.conf (proxy reverso)</a>
             </div>
         </section>
 
         <section class="card card--accent-blue">
-            <h3>Requisitos do Servidor (Recomendado)</h3>
+            <h3>Requisitos do servidor (referência)</h3>
             <ul>
                 <li><strong>Sistema Operacional:</strong> Ubuntu Server 22.04 LTS ou superior (64-bit)</li>
-                <li><strong>Mínimo:</strong> 1 vCPU, 2 GB RAM (para uso leve / homologação)</li>
-                <li><strong>Recomendado:</strong> 2 vCPUs, 4 GB RAM (operações ativas em produção)</li>
+                <li><strong>Mínimo:</strong> 1 vCPU, 2 GB RAM (avaliação de infraestrutura)</li>
+                <li><strong>Recomendado:</strong> 2 vCPUs, 4 GB RAM (ambiente de testes com mais serviços)</li>
                 <li><strong>Armazenamento:</strong> 20 GB de espaço SSD</li>
                 <li><strong>Software:</strong> Docker Engine 24.0+ e Docker Compose v2.0+ instalado</li>
             </ul>
+            <p class="note">Requisitos para operação em produção serão publicados junto com a v1.0.0.</p>
         </section>
 
         <section class="card card--accent-amber">
-            <h3>Verificação e Segurança</h3>
-            <p>O back-end do Helianto Condominium utiliza segurança ativa de banco de dados e higienizador de logs em tempo real (PrivacyGuard - LGPD Shield). Certifique-se de que a porta <code>5432</code> do banco PostgreSQL não seja exposta publicamente na internet (os templates de Docker fornecidos já asseguram essa proteção).</p>
+            <h3>Verificação e segurança</h3>
+            <p>Os templates já impedem a exposição pública da porta <code>5432</code> do PostgreSQL. A higienização de logs (PrivacyGuard - LGPD Shield) e a autenticação via JWT fazem parte do aplicativo, que está em desenvolvimento e não acompanha estes arquivos.</p>
         </section>
 
         <nav class="download-back">
             <a href="index.html" class="cta-btn cta-btn-secondary">← Voltar para apresentação</a>
-            <a href="canal-feedback.html" class="cta-btn cta-btn-secondary">Canal de feedback</a>
-            <a href="index.html" class="cta-btn cta-btn-secondary">Apresentação na loja</a>
+            <a href="canal-feedback.html" class="cta-btn cta-btn-secondary">Falar com a Cara Core</a>
+            <a href="https://www.caracore.com.br/planning.html" class="cta-btn cta-btn-secondary" rel="noopener">Acompanhar o roadmap</a>
         </nav>
 
-        <footer class="cso-footer">
-            <p>Oficina: caracore-helianto · Loja: helianto.caracore.com.br · Lançamento: 30 de dezembro de 2029 · <a href="https://www.caracore.com.br/portfolio.html#caracore-helianto" rel="noopener">Portfólio Cara Core</a></p>
-            <p>&copy; 2026 Cara Core Informática - Inovação, Soberania e Eficiência</p>
+        <footer class="helianto-footer">
+            <p class="footer-legal">Cara Core Informática · CNPJ 23.969.028/0001-37 · <a href="https://www.caracore.com.br/">www.caracore.com.br</a> · <a href="mailto:suporte@caracore.com.br">suporte@caracore.com.br</a></p>
+            <p class="footer-links"><a href="https://www.caracore.com.br/portfolio.html#caracore-helianto" rel="noopener">Portfólio</a> · <a href="https://www.caracore.com.br/ecosistema.html#roadmap" rel="noopener">Ecossistema</a> · <a href="https://www.caracore.com.br/planning.html" rel="noopener">Planning</a> · <a href="https://wiki.caracore.com.br/projeto-helianto.html" rel="noopener">Wiki do projeto</a></p>
         </footer>
     </div>
 
-    <script src="assets/js/main.js?v=20260404-2"></script>
-    <div class="evo-beta-wrap" aria-hidden="true">
-        <span class="evo-beta-badge" title="Loja oficial">Active
-            <span class="evo-beta-tooltip">Esta é a loja oficial de releases e guias de infraestrutura do Helianto Condominium.</span>
-        </span>
-    </div>
+    <script src="assets/js/main.js?v=20261030-helianto-2029"></script>
     <div class="evo-feedback-fab">
-        <a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Sugira uma melhoria pelo canal oficial">
+        <a href="canal-feedback.html" class="evo-feedback-btn" aria-label="Falar com a Cara Core">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            Solicitar demonstração
+            Falar com a Cara Core
         </a>
     </div>
 </body>
 </html>
-

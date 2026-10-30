@@ -1,20 +1,22 @@
 # Isolamento Multi-Tenant
 
+> Este documento descreve o comportamento **previsto** do aplicativo, em desenvolvimento.
+
 ## Princípios de Multilocação
 
-O Helianto Condominium é projetado como uma plataforma multi-tenant real de banco compartilhado e esquema compartilhado (Shared Database, Shared Schema) com isolamento lógico rígido de dados. Isso significa que dados de múltiplos condomínios residem no mesmo banco de dados PostgreSQL, mas são estritamente segregados no nível da aplicação.
+O Helianto Condominium é projetado como uma plataforma multi-tenant de banco compartilhado e esquema compartilhado (Shared Database, Shared Schema), com isolamento lógico de dados na camada de aplicação. Dados de múltiplos condomínios residem no mesmo banco PostgreSQL e são segregados por contexto de tenant.
 
 ## Mecanismo de Isolamento Técnico
 
-1. **Contexto de Tenant por Requisição:**
-   Toda requisição HTTP recebida pelo back-end do Helianto Condominium deve conter um cabeçalho de autenticação com um token JWT válido. Esse token inclui a declaração (claim) de identificação do inquilino (`tenant_id`).
-   
-2. **Interceptação de Requisição:**
-   Um interceptador de segurança do Spring Boot captura o `tenant_id` de cada requisição e o registra no armazenamento `ThreadLocal` específico do fluxo daquela requisição.
-   
-3. **Filtros Automáticos de Query:**
-   Toda leitura e escrita feita no banco de dados através do Hibernate/JPA injeta automaticamente o identificador do inquilino atual na cláusula `WHERE` da query. Isso previne qualquer possibilidade de vazamento cruzado de relatórios, boletos ou registros contábeis entre condomínios diferentes.
+1. **Contexto de tenant por requisição:**
+   Toda requisição HTTP ao back-end deve conter um cabeçalho de autenticação com token JWT válido. O token inclui a declaração (claim) de identificação do inquilino (`tenant_id`).
+
+2. **Interceptação de requisição:**
+   Um interceptador do Spring Boot captura o `tenant_id` de cada requisição e o registra no `ThreadLocal` do fluxo daquela requisição.
+
+3. **Filtros automáticos de query:**
+   As leituras e escritas via Hibernate/JPA incluem o identificador do tenant atual na cláusula `WHERE` da query. O objetivo é impedir o vazamento cruzado de relatórios, boletos ou registros contábeis entre condomínios.
 
 ## Proteção e Firewall de Banco
 
-Como boa prática de segurança de infraestrutura, a porta `5432` do PostgreSQL é exposta apenas para a rede interna virtual do Docker. Dessa forma, nenhuma requisição externa direta ao banco de dados é aceita, limitando os acessos estritamente às rotas validadas da API do Helianto.
+Como boa prática de segurança de infraestrutura, a porta `5432` do PostgreSQL é exposta apenas para a rede interna virtual do Docker. Nenhuma requisição externa direta ao banco é aceita, limitando os acessos às rotas da API.
