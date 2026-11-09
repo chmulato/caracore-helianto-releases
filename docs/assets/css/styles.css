@@ -739,7 +739,7 @@ section {
 
 .content-list a {
     color: var(--cc-primary);
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .content-list a:hover {
@@ -897,6 +897,12 @@ footer a,
 
 footer a:hover,
 .helianto-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Links no meio do texto: sublinhado como distincao que nao depende so da cor (WCAG 1.4.1) */
+footer .footer-legal a,
+.helianto-footer .footer-legal a {
     text-decoration: underline;
 }
 
